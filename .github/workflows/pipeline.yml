@@ -1,0 +1,47 @@
+name: Pipeline
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Add .env
+        run: echo -e "${{ secrets.ENV }}\nCOMMIT_HASH='${{ github.sha }}'" > .env
+      - name: Build FRONT Images
+        run: docker-compose build front
+      # - name: Build API Images
+      #   run: docker-compose build api
+  # test:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Add .env
+  #       run: echo -e "${{ secrets.ENV }}\nCOMMIT_HASH='${{ github.sha }}'" > .env
+  #     - name: Run API tests
+  #       run: docker-compose run --rm api yarn prod:test
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Connect to VPS
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_ADDRESS }}
+          username: ${{ secrets.VPS_USER }}
+          password: ${{ secrets.VPS_PASSWORD }}
+          script: |
+            cd /home/${{ github.repository }} 
+            docker-compose down 
+            git pull 
+            echo -e "${{ secrets.ENV }}\nCOMMIT_HASH='${{ github.sha }}'" > .env 
+            docker-compose up -d --build --force-recreate
+
