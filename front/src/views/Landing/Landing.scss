@@ -145,25 +145,42 @@
         .posts {
             width: 100%;
             > div {
-                display: flex;
-                align-items: center;
                 margin-bottom: 67px;
-                h4 {
-                    margin: 0 40px 0 0;
-                    font-weight: 700;
-                    font-size: 48px;
-                    line-height: 65px;
-                    letter-spacing: 0.02em;
-                    strong {
-                        color: var(--maximum-blue-green);
+                display: flex;
+                flex-direction: column;
+                > div {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 32px;
+                    h4 {
+                        margin: 0 40px 0 0;
                         font-weight: 700;
+                        font-size: 48px;
+                        line-height: 65px;
+                        letter-spacing: 0.02em;
+                        strong {
+                            color: var(--maximum-blue-green);
+                            font-weight: 700;
+                        }
                     }
+                }
+                p {
+                    margin: 0;
+                    max-width: 1100px;
+                    width: 100%;
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 33px;
+                    color: var(--prussian-blue);
                 }
             }
         }
         span {
             width: 100%;
             text-align: right;
+        }
+        .low{
+            display: none;
         }
     }
     footer {
@@ -220,7 +237,7 @@
 }
 
 @media screen and (max-width: 1180px) {
-    .landing .team .posts > div {
+    .landing .team .posts > div > div {
         justify-content: space-between;
     }
 }
@@ -299,7 +316,7 @@
                 font-size: 72px;
                 line-height: 121%;
             }
-            .posts > div {
+            .posts > div > div {
                 flex-direction: column;
                 align-items: flex-end;
                 h4 {
@@ -309,6 +326,14 @@
                     margin: 0 0 8px;
                 }
             }
+            .low {
+                display: revert;
+                align-self: flex-end;
+                margin-top: 24px;
+            }
+            .high{
+                display: none;
+            }
         }
     }
 }
@@ -316,10 +341,10 @@
 @media screen and (max-width: 340px) {
     .landing {
         .hero .hero-content {
-            img{
+            img {
                 min-width: 300px;
             }
-            h4{
+            h4 {
                 font-size: 32px;
                 line-height: 121%;
             }
