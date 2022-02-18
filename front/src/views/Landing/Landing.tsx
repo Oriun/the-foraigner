@@ -81,12 +81,12 @@ const Landing: React.FC = () => {
         <div className="posts">
           <div>
             <div>
-              <h4>Ingénieur en Intelligence Artificielle</h4>
-              <StandardButton
+              <h4>Ingénieur en Intelligence Artificielle (full)</h4>
+              {/* <StandardButton
                 text="Postuler"
                 onClick={() => window.open(mailTo)}
                 className='high'
-              />
+              /> */}
             </div>
             <p>
               La pièce maîtresse, sans toi ce projet n’est rien ! Tu rejoindras
@@ -96,20 +96,20 @@ const Landing: React.FC = () => {
               cpp (au choix (lol 🤡)) et tu n’as pas peur du challenge ? Tu sais
               quoi faire 🤖 *Présentez un Captcha de moins de 24h pour postuler
             </p>
-              <StandardButton
+              {/* <StandardButton
                 text="Postuler"
                 onClick={() => window.open(mailTo)}
                 className='low'
-              />
+              /> */}
           </div>
           <div>
             <div>
-              <h4>Data Engineer</h4>
-              <StandardButton
+              <h4>Data Engineer (full)</h4>
+              {/* <StandardButton
                 text="Postuler"
                 onClick={() => window.open(mailTo)}
                 className='high'
-              />
+              /> */}
             </div>
             <p>
               Pas de fumée sans 🔥 ! Pas de tech sans data ! Tu seras le point
@@ -119,20 +119,20 @@ const Landing: React.FC = () => {
               recherche de nouveaux gisements pétroliers pour alimenter notre
               belle machine. Alors, prêt à partir ?
             </p>
-              <StandardButton
+              {/* <StandardButton
                 text="Postuler"
                 onClick={() => window.open(mailTo)}
                 className='low'
-              />
+              /> */}
           </div>
           <div>
             <div>
-              <h4>Ingénieur Cloud</h4>
-              <StandardButton
+              <h4>Ingénieur Cloud (full)</h4>
+              {/* <StandardButton
                 text="Postuler"
                 onClick={() => window.open(mailTo)}
                 className='high'
-              />
+              /> */}
             </div>
             <p>
               Tu sais pourquoi on t’appelles. TU SAIS que nous, comme beaucoup
@@ -141,20 +141,20 @@ const Landing: React.FC = () => {
               et 39 000 tonnes de bétons ? On a besoin d’une archi aussi solide
               pour notre projet, t’es chaud 💪 ?
             </p>
-              <StandardButton
+              {/* <StandardButton
                 text="Postuler"
                 onClick={() => window.open(mailTo)}
                 className='low'
-              />
+              /> */}
           </div>
           <div>
             <div>
-              <h4>Développeur Web Full-Stack</h4>
-              <StandardButton
+              <h4>Développeur Web Full-Stack (full)</h4>
+              {/* <StandardButton
                 text="Postuler"
                 onClick={() => window.open(mailTo)}
                 className='high'
-              />
+              /> */}
             </div>
             <p>
               Heureux qui comme Ulyscss à fait une landing page... ou pas. Fini
@@ -164,11 +164,11 @@ const Landing: React.FC = () => {
               as REST-sama, WebSocket-kun et React-chan. Une PWA et une API tu
               coderas avec la team. Les indécis passez votre chemin 🧙‍♂️ !
             </p>
-              <StandardButton
+              {/* <StandardButton
                 text="Postuler"
                 onClick={() => window.open(mailTo)}
                 className='low'
-              />
+              /> */}
           </div>
           <div>
             <div>
