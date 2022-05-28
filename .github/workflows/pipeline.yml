@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
+    if: github.repository == 'Oriun/the-foraigner'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -28,6 +29,7 @@ jobs:
   #     - name: Run API tests
   #       run: docker-compose run --rm api yarn prod:test
   deploy:
+    if: github.repository == 'Oriun/the-foraigner'
     needs: build
     runs-on: ubuntu-latest
     steps:
