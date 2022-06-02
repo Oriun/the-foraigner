@@ -1,0 +1,31 @@
+{
+  "name": "TheForaignerAPI",
+  "version": "1.0.0",
+  "description": "TheForaigner",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node test.spec.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js --ignore static/*"
+  },
+  "author": "TheForaigner",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.11.0",
+    "axios": "^0.27.2",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-static": "^1.2.6",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.3.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.16",
+    "pino": "^7.11.0"
+  }
+}
