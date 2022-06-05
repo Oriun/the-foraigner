@@ -1,4 +1,4 @@
-name: CI
+name: Mirroir
 
 # Controls when the workflow will run
 on:
@@ -11,7 +11,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  copy:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     if: github.repository == 'Oriun/the-foraigner'
@@ -36,4 +36,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Fetch and push
         run: |
-          ssh-agent bash -c 'ssh-add ../key; git fetch --unshallow old; git push -f --set-upstream origin ${{ github.refname }}'
+          ssh-agent bash -c 'ssh-add ../key; git fetch --unshallow old; git push -f --set-upstream origin ${{ github.ref_name }}'
