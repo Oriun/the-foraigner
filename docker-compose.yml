@@ -33,7 +33,6 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS:-aovxKafANoIU3qPl}
       MONGO_INITDB_DATABASE: ${MONGO_DB:-foraigner}
   redis:
-    container_name: redis-dev
     image: redis:6.2-alpine
   
 
