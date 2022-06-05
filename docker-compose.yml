@@ -5,7 +5,35 @@ services:
     build:
       context: ./front
       args:
-        REACT_APP_API_BASE: ${API_BASE}
+        REACT_APP_API_BASE: ${API_BASE:-'http://localhost:8090'}
     ports:
       - '8089:80'
       # Api on port 8090 
+    env_file:
+      - .env
+  api:
+    restart: unless-stopped
+    build: ./api
+    env_file:
+      - .env
+    ports:
+      - '${API_PORT:-8090}:${API_PORT:-5000}'
+    depends_on:
+      - bdd
+      - redis
+    volumes:
+      - ${API_LOG:-./log}:/log
+  bdd:
+    image: mongo:5.0.4
+    volumes:
+      - ${MONGO_BACKUP:-./mongo_data}:/data/db
+      # - ./bdd:/docker-entrypoint-initdb.d
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER:-foraigner_cp4FDt}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS:-aovxKafANoIU3qPl}
+      MONGO_INITDB_DATABASE: ${MONGO_DB:-foraigner}
+  redis:
+    container_name: redis-dev
+    image: redis:6.2-alpine
+  
+

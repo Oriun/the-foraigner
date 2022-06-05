@@ -75,6 +75,7 @@ UserRouter.post("/register", (req, res) => {
 // @access Public
 UserRouter.post("/login", async (request, response) => {
   var user = await User.findOne({ email: request.body.email }).exec();
+  console.log(user)
   if (!user) {
     return response
       .status(200)

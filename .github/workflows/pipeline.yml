@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
   workflow_dispatch:
 jobs:
   build:
@@ -17,8 +14,8 @@ jobs:
         run: echo -e "${{ secrets.ENV }}\nCOMMIT_HASH='${{ github.sha }}'" > .env
       - name: Build FRONT Images
         run: docker-compose build front
-      # - name: Build API Images
-      #   run: docker-compose build api
+      - name: Build API Images
+        run: docker-compose build api
   # test:
   #   needs: build
   #   runs-on: ubuntu-latest
@@ -42,8 +39,8 @@ jobs:
           password: ${{ secrets.VPS_PASSWORD }}
           script: |
             cd /home/${{ github.repository }} 
-            docker-compose down 
             git pull 
             echo -e "${{ secrets.ENV }}\nCOMMIT_HASH='${{ github.sha }}'" > .env 
-            docker-compose up -d --build --force-recreate
+            docker-compose build
+            docker-compose up -d --force-recreate
 

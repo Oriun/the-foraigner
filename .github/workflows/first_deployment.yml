@@ -4,6 +4,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.repository == 'Oriun/the-foraigner'
     steps:
       - uses: actions/checkout@v2
       - name: Add .env
@@ -13,6 +14,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: github.repository == 'Oriun/the-foraigner'
     steps:
       - uses: actions/checkout@v2
       - name: Connect to VPS

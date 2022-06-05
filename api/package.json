@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node test.spec.js",
+    "test": "jasmine test.spec.js",
     "start": "node index.js",
     "dev": "nodemon index.js --ignore static/*"
   },
@@ -25,7 +25,12 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.2",
     "morgan": "^1.10.0",
+    "pino": "^7.11.0",
+    "redis": "^4.1.0"
+  },
+  "devDependencies": {
+    "jasmine": "^4.1.0",
     "nodemon": "^2.0.16",
-    "pino": "^7.11.0"
+    "supertest": "^6.2.3"
   }
 }

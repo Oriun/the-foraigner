@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY ./package.json ./package.json
 
-RUN yarn install
+RUN yarn install --production
 
 COPY ./ ./
 
 CMD yarn start
 
-EXPOSE ${API_PORT}
+# EXPOSE ${API_PORT}

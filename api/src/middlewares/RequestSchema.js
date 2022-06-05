@@ -1,4 +1,6 @@
 import Ajv from "ajv";
+import { idGenerator } from "../utils.js";
+import { BadRequest, Unexpected } from "../views/Errors.js";
 
 /**
  * 
@@ -41,6 +43,11 @@ const ajv = new Ajv({
   verbose: false,
 });
 
+/**
+ * It takes a schema, and returns a middleware function that validates the request against the schema.
+ * @param schema - {
+ * @returns A function that takes in a request, response, and next function.
+ */
 export default function checkSchema(schema) {
   const validate = ajv.compile({
     $async: true,
@@ -60,11 +67,8 @@ export default function checkSchema(schema) {
         next();
       })
       .catch(({ errors: [error] }) => {
-        res.status(400).json({
-          code: 400,
-          status: "Bad Request",
-          error: error.dataPath.slice(1) + " " + error.message,
-        });
-      });
+        BadRequest(res, error.instancePath.slice(1).replace(/\//gmi, '.') + " " + error.message)
+      })
+      .catch(Unexpected.bind(null,res));
   };
 }
