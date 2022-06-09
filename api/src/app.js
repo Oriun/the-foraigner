@@ -25,6 +25,15 @@ App.use(
         credentials: true,
     })
 );
+
+App.use(function(req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next();
+  });
+
 App.use(CookieParser());
 App.use(Access());
 App.use(BodyParser.json());
@@ -83,6 +92,7 @@ if (!PORT) {
     console.log('Don\'t forget to use an environment file')
     process.exit(0)
 }
+
 export function startAppOnly() {
     return new Promise(function (resolve, reject) {
         App.listen(PORT, "0.0.0.0", function (err) {

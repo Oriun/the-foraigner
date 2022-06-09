@@ -3,7 +3,7 @@ import DotEnv from 'dotenv';
 import { fileURLToPath } from 'url';
 
 DotEnv.config({
-    path: path.join(path.dirname(fileURLToPath(import.meta.url)), '../../.env')
+    path: path.join(path.dirname(fileURLToPath(import.meta.url)), '../.env')
 });
 
 export const UrlValidator = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
