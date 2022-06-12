@@ -1,19 +1,13 @@
 import Cors from 'cors'
-import path from 'path'
-import DotEnv from 'dotenv'
 import Express from 'express'
 import Mongoose from 'mongoose';
-import { fileURLToPath } from 'url';
 import BodyParser from 'body-parser';
-import Router from './routes/index.js';
-import { cleanExit } from './utils.js';
+import Router from './routes/index';
+import { cleanExit } from './utils';
 import CookieParser from "cookie-parser";
-import Log, { Access } from "./logger.js";
-import RedisClient from './models/Redis.js';
-import { mongoUrl, PORT } from './constantes.js';
-DotEnv.config({
-    path: path.join(path.dirname(fileURLToPath(import.meta.url)), '../../.env')
-});
+import Log, { Access } from "./logger";
+import RedisClient from './models/Redis';
+import { mongoUrl, PORT } from './constantes';
 cleanExit()
 
 export const App = Express();
@@ -21,33 +15,25 @@ export const App = Express();
 // Useful Middlewares
 App.use(
     Cors({
-        origin: [process.env.FRONT_URL || "http://localhost:3000"],
+        origin: [process.env.FRONT_URL || "http://localhost:3001", "http://localhost:3000"],
         credentials: true,
     })
 );
-
-App.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
-  });
 
 App.use(CookieParser());
 App.use(Access());
 App.use(BodyParser.json());
 App.use('/api', Router);
 
-App.get("/", (req, res) => {
+App.get("/", (_, res) => {
     res.send("The Foraigner Api");
 });
 
-App.get('/version', (req, res) => {
+App.get('/version', (_, res) => {
     res.send(process.env.COMMIT_HASH || null)
 })
 
-export function mongooseConnect(attemptsLeft = 10) {
+export function mongooseConnect(attemptsLeft = 10): Promise<void> {
     return Mongoose.connect(mongoUrl)
         .then(() => {
             Log.info("Successfully connected to the database");
@@ -68,8 +54,8 @@ export function mongooseConnect(attemptsLeft = 10) {
         });
 }
 
-function redisConnect(attemptsLeft = 10) {
-    RedisClient.connect()
+function redisConnect(attemptsLeft = 10): Promise<void> {
+    return RedisClient.connect()
         .then(async () => {
             Log.info("Successfully connected to the database");
         })
@@ -77,10 +63,12 @@ function redisConnect(attemptsLeft = 10) {
             console.error(err);
             if (attemptsLeft) {
                 Log.error("Could not connect to the redis. Retrying...");
-                return setTimeout(
-                    () => redisConnect(attemptsLeft - 1),
-                    5000
-                );
+                return new Promise(res => {
+                    setTimeout(
+                        () => res(redisConnect(attemptsLeft - 1)),
+                        5000
+                    );
+                })
             }
             Log.error(
                 "Could not connect to the redis. Maximum attempt exceeded. Aborting process"
@@ -93,20 +81,23 @@ if (!PORT) {
     process.exit(0)
 }
 
-export function startAppOnly() {
-    return new Promise(function (resolve, reject) {
-        App.listen(PORT, "0.0.0.0", function (err) {
-            if (err) reject(err)
-            console.log(`App running on port ${PORT}.`);
-            Log.info(`App started on port${PORT} at${Date.now()}`)
-            resolve()
-        })
+export function startAppOnly(): Promise<void> {
+    return new Promise<void>(function (resolve, reject) {
+        try {
+            App.listen(PORT, "0.0.0.0", function () {
+                console.log(`App running on port ${PORT}.`);
+                Log.info(`App started on port${PORT} at${Date.now()}`)
+                resolve()
+            })
+        } catch (err) {
+            reject()
+        }
     })
 }
 
-export default function FullStart() {
+export default function FullStart(): Promise<void> {
     console.log('FullStart')
-    mongooseConnect(10)
+    return mongooseConnect(10)
         .then(() => redisConnect(10))
         .then(startAppOnly)
 }
