@@ -1,11 +1,17 @@
 //import request from './node_modules/';
-import DotEnv from 'dotenv'
-import axios from 'axios'
-import jwt from 'jsonwebtoken'
-import querystring from 'querystring';
-import crypto from 'crypto'
-DotEnv.config()
-//const { axios } = pkg;
+// import DotEnv from 'dotenv'
+// import axios from 'axios'
+// import jwt from 'jsonwebtoken'
+// import querystring from 'querystring';
+// import crypto from 'crypto'
+// DotEnv.config()
+var axios = require("axios");
+const dotenv = require('dotenv');
+const jwt = require('jsonwebtoken');
+const crypto = require("crypto");
+const querystring = require("querystring")
+dotenv.config();
+//const { axios } = axios;
 
 let jwtSecretKey = process.env.SECRET_TOKEN;
 let data = { time: Date(),  userId: 12 }

@@ -20,6 +20,10 @@ const ExerciceSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  language: {
+    type: String,
+    require: true,
+  },
   created_at: {
     type: Date,
     require: true,

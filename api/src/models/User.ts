@@ -20,20 +20,20 @@ const UserSchema = new mongoose.Schema({
     required: true,
     unique: false,
   },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    validate: [validateEmail, "Please fill a valid email address"],
-    match: [
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-      "Please fill a valid email address",
-    ],
-  },
-  password: { // to hash
-    type: String,
-    required: true,
-  },
+  // email: {
+  //   type: String,
+  //   required: true,
+  //   unique: true,
+  //   validate: [validateEmail, "Please fill a valid email address"],
+  //   match: [
+  //     /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+  //     "Please fill a valid email address",
+  //   ],
+  // },
+  // password: { // to hash
+  //   type: String,
+  //   required: true,
+  // },
   language: {
     type: String,
     require: true,

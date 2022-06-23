@@ -1,7 +1,7 @@
 import path from 'path'
 import DotEnv from 'dotenv'
 DotEnv.config({
-    path: path.join(__dirname, '../../.env')
+    path: path.join(__dirname, '../.env')
 });
 export const UrlValidator = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
 
@@ -17,5 +17,4 @@ export const emailValidator = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)
 export const oneDayInSeconds = 60 * 60 * 24
 export const oneDayInMilliseconds = oneDayInSeconds * 1000
 
-console.log(process.env.PORT)
 export const PORT = parseInt(process.env.API_PORT!)
