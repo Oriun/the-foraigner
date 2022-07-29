@@ -11,8 +11,13 @@ const ExerciceSchema = new mongoose.Schema({
     required: true,
     unique: false,
   },
-  content: {
+  category: {
     type: String,
+    required: true,
+    unique: false,
+  },
+  content: {
+    type: mongoose.Schema.Types.Mixed,
     required: true,
     unique: false,
   },
