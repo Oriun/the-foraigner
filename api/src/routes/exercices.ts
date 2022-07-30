@@ -1,6 +1,5 @@
 import { Router } from "express";
 const ExerciceRouter = Router()
-import bcrypt from "bcrypt";
 import AuthGuard from "../token.js";
 import Exercice from "../models/Exercice";
 
@@ -10,7 +9,7 @@ import Exercice from "../models/Exercice";
 ExerciceRouter.get("/", AuthGuard, (req, res) => {
   Exercice.find()
     .then((exercice) => res.json(exercice))
-    .catch((err) => res.status(404).json({ nocryptosfound: "No exercice  found" }));
+    .catch((err) => res.status(404).json({ noexercicefound: "No exercice  found" }));
 });
 
 // @route PUT api/exercice/:id
@@ -19,7 +18,7 @@ ExerciceRouter.get("/", AuthGuard, (req, res) => {
 ExerciceRouter.put("/:id", AuthGuard, (req, res) => {
   Exercice.findByIdAndUpdate(req.params.id, req.body)
     .then((exercice) => res.json({ msg: "Exercice modified successfully" }))
-    .catch((err) => res.status(404).json({ nouserfound: "No exercice found" }));
+    .catch((err) => res.status(404).json({ noexercicefound: "No exercice found" }));
 });
 
 
@@ -30,7 +29,7 @@ ExerciceRouter.put("/:id", AuthGuard, (req, res) => {
 ExerciceRouter.get("/:id", AuthGuard, (req, res) => {
   Exercice.findById(req.params.id)
     .then((exercice) => res.json(exercice))
-    .catch((err) => res.status(404).json({ nouserfound: "No exercice found" }));
+    .catch((err) => res.status(404).json({ noexercicefound: "No exercice found" }));
 });
 
 
