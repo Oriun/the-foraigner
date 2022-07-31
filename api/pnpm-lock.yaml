@@ -32,6 +32,7 @@ specifiers:
   redis: ^4.1.0
   supertest: ^6.2.3
   ts-node: ^10.8.1
+  tsc: ^2.0.4
   typescript: ^4.7.3
 
 dependencies:
@@ -68,6 +69,7 @@ devDependencies:
   nodemon: 2.0.19
   supertest: 6.2.4
   ts-node: 10.9.1_x2utdhayajzrh747hktprshhby
+  tsc: 2.0.4
   typescript: 4.7.4
 
 packages:
@@ -1847,6 +1849,11 @@ packages:
       typescript: 4.7.4
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
+    dev: true
+
+  /tsc/2.0.4:
+    resolution: {integrity: sha512-fzoSieZI5KKJVBYGvwbVZs/J5za84f2lSTLPYf6AGiIf43tZ3GNrI1QzTLcjtyDDP4aLxd46RTZq1nQxe7+k5Q==}
+    hasBin: true
     dev: true
 
   /tslib/2.4.0:
