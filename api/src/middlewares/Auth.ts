@@ -54,7 +54,7 @@ const middleware : AuthMiddleware = function (
         });
       }
 
-      if ((user.Admin && allowAdmin) || (!user.Admin && allowLogged)) {
+      if ((user.admin && allowAdmin) || (!user.admin && allowLogged)) {
         req.user = user;
         return next();
       } else if (allowLogged) {

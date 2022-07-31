@@ -4,7 +4,7 @@ const ExerciceSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
-    unique: false,
+    unique: true,
   },
   type: {
     type: String,
@@ -24,6 +24,11 @@ const ExerciceSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true,
+  },
+  language: {
+    type: String,
+    required: false,
+    default: "en"
   },
   created_at: {
     type: Date,

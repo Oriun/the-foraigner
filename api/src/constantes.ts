@@ -17,5 +17,4 @@ export const emailValidator = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)
 export const oneDayInSeconds = 60 * 60 * 24
 export const oneDayInMilliseconds = oneDayInSeconds * 1000
 
-console.log(process.env.PORT)
 export const PORT = parseInt(process.env.API_PORT!)

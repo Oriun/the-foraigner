@@ -1,6 +1,7 @@
 import { Router } from "express";
 import AuthRouter from "./auth";
 import UserRouter from "./users"
+import ExerciseRouter from "./exercices";
 
 //import  UserRouter from './users.js';
 /**
@@ -21,6 +22,7 @@ import UserRouter from "./users"
 const MainRouter = Router()
 MainRouter.use('/user', UserRouter)
 MainRouter.use('/auth', AuthRouter)
+MainRouter.use('/exercise', ExerciseRouter)
 
 // route to test
 

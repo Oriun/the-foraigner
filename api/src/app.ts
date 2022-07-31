@@ -34,11 +34,13 @@ App.get('/version', (_, res) => {
 })
 
 export function mongooseConnect(attemptsLeft = 10): Promise<void> {
+    console.log('MongoUrl', mongoUrl)
     return Mongoose.connect(mongoUrl)
         .then(() => {
             Log.info("Successfully connected to the database");
         })
         .catch((err) => {
+            console.log('yo')
             console.error(err);
             if (attemptsLeft) {
                 Log.error("Could not connect to the database. Retrying...");
@@ -100,4 +102,5 @@ export default function FullStart(): Promise<void> {
     return mongooseConnect(10)
         .then(() => redisConnect(10))
         .then(startAppOnly)
+        .then(()=>console.log('FullStart done'))
 }
