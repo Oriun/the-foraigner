@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import IphoneMockUp from "../../components/IphoneMockUp";
 import LanguageBadge from "../../components/LanguageBadge";
 import StandardButton from "../../components/StandardButton";
@@ -6,6 +7,7 @@ import { mailTo } from "../../services/Contact";
 import "./Landing.scss";
 
 const Landing: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <div className="landing">
       <div className="head">
@@ -48,7 +50,7 @@ const Landing: React.FC = () => {
           </h4>
           <StandardButton
             text="Essayer maintenant"
-            onClick={() => alert("Rien par ici pour l'instant")}
+            onClick={() => navigate('/auth')}
           />
         </div>
       </div>

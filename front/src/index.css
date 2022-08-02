@@ -19,12 +19,17 @@ code {
   --black: #000000;
   --white: #ffffff;
   --nunito-sans: "Nunito Sans", sans-serif;
-  --margin: 146px;
+  --margin: 120px;
+  --col-gutter: 20px;
+  --column: calc((100vw - var(--margin) * 2 - 11 * var(--col-gutter)) / 12);
+  --row-gutter: 20px;
+  --row: 120px;
 }
 
 * {
   font-family: var(--nunito-sans);
   color: var(--prussian-blue);
+  box-sizing: border-box;
 }
 
 html,
@@ -32,6 +37,7 @@ html,
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 html::-webkit-scrollbar,
 .noscrollbar::-webkit-scrollbar {
   display: none;
@@ -42,23 +48,59 @@ button {
 }
 
 @media screen and (max-width: 1630px) {
-  :root{
+  :root {
     --margin: 120px;
   }
 }
+
 @media screen and (max-width: 1380px) {
-  :root{
+  :root {
     --margin: 80px;
   }
 }
+
 @media screen and (max-width: 1080px) {
-  :root{
+  :root {
     --margin: 40px;
   }
 }
 
 @media screen and (max-width: 920px) {
-  :root{
+  :root {
     --margin: 24px;
   }
+}
+
+.grand-title {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 65px
+}
+
+.section-head {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.small-title {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
