@@ -18,6 +18,7 @@ code {
   --maximum-blue-green: #06bcc1;
   --black: #000000;
   --white: #ffffff;
+  --border: #C9C7C6;
   --nunito-sans: "Nunito Sans", sans-serif;
   --margin: 120px;
   --col-gutter: 20px;
@@ -72,15 +73,23 @@ button {
 }
 
 .grand-title {
-  font-family: 'Nunito Sans';
+  font-family: var(--nunito-sans);
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 65px
 }
 
+.section-title {
+  font-family: var(--nunito-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+}
+
 .section-head {
-  font-family: 'Nunito Sans';
+  font-family: var(--nunito-sans);
   font-style: normal;
   font-weight: 300;
   font-size: 24px;
@@ -88,11 +97,19 @@ button {
 }
 
 .small-title {
-  font-family: 'Nunito Sans';
+  font-family: var(--nunito-sans);
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 33px;
+}
+
+.paragraph {
+  font-family: var(--nunito-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
 }
 
 h1,

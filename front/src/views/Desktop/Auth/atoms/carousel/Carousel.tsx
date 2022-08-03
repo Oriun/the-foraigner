@@ -43,6 +43,7 @@ const Carousel = () => {
             <div
               onClick={() => i !== page && setPage(i)}
               className={page === i ? "current" : ""}
+              key={`dot${i}`}
             />
           );
         })}

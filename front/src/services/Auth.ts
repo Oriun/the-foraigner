@@ -4,6 +4,7 @@ import { APIError } from './Utils';
 export const register = async (email: string, password: string) => {
   const response = await fetch(`${API_BASE}/api/auth/register`, {
     method: "POST",
+    credentials: 'include',
     headers: {
       "Content-Type": "application/json"
     },
@@ -20,6 +21,7 @@ export const register = async (email: string, password: string) => {
 export const logout = async () => {
   const response = await fetch(`${API_BASE}/api/auth/logout`, {
     method: "POST",
+    credentials: 'include',
     headers: {
       "Content-Type": "application/json"
     }
@@ -32,6 +34,7 @@ export const logout = async () => {
 export const login = async (email: string, password: string) => {
   const response = await fetch(`${API_BASE}/api/auth/login`, {
     method: "POST",
+    credentials: 'include',
     headers: {
       "Content-Type": "application/json"
     },

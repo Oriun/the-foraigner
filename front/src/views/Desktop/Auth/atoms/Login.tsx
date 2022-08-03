@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../../../services/Auth";
 import { APIError } from "../../../../services/Utils";
 import Form from "./from/Form";
 
 const Login = () => {
-  
+  const navigate = useNavigate()
   const submit = async (email: string, password: string) => {
     console.log("register", { email, password });
     try {
       await login(email, password);
-      window.alert("authenticated");
+      navigate('/app');
     } catch (err) {
       const e = err as APIError;
       /**

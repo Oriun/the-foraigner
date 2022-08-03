@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Auth from "./views/Desktop/Auth";
 import Landing from "./views/Landing";
 import { DesignGuidelines } from "@oriun/gray-cat";
@@ -9,6 +9,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="games/*" element={<Games />} />
+      <Route path="*" element={<Navigate to="games" />} />
     </Routes>
   )
 }

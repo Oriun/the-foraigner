@@ -1,68 +1,28 @@
-.empty {
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    float: left;
-    text-transform: uppercase;
-    font-size: 26px;
-    border-radius: 0px;
-
-}
-
-.full {
-    background: black;
-    width: 50px;
-    height: 50px;
-    float: left;
-}
-
-br {
-    line-height: 50px;
-}
-
-br.leg {
-    line-height: 20px;
-}
-
-.legendPlaceholder {
-    float: left;
-    width: 50px;
-    height: 20px;
-    line-height: 20px;
-}
-
-.legendH {
-    float: left;
-    width: 50px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    font-size: 90%;
-}
-
-.legendV {
-    float: left;
-    width: 45px;
-    height: 50px;
-    padding-right: 5px;
-    line-height: 50px;
-    text-align: right;
-    font-size: 90%;
-}
-
-button {
-    margin-left: 50px;
-    margin-top: 20px;
-}
-
-#grid
-{
-    width: 630px;
-}
-
-
-.ligne
-{
-    display: inline-flex
+main.crosswords {
+    padding: 80px;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--isabelline);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    gap: calc(var(--column) + var(--col-gutter));
+    > div.crosswords-grid{
+        display: grid;
+        aspect-ratio: 1;
+        height: 100%;
+    }
+    >div.crosswords-details {
+        max-width: calc(4 * var(--column) + 3 * var(--col-gutter)) ;
+        h1 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 56px;
+        }
+        ol {
+            margin-bottom: 40px;
+        }
+    }
 }
