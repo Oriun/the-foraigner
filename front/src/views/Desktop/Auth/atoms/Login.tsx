@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { login } from "../../../services/Auth";
-import { APIError } from "../../../services/Utils";
+import { login } from "../../../../services/Auth";
+import { APIError } from "../../../../services/Utils";
 import Form from "./from/Form";
 
 const Login = () => {

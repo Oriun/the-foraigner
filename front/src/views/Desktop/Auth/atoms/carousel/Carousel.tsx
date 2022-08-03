@@ -1,8 +1,8 @@
 import React from "react";
 import "./Carousel.scss";
-import { ReactComponent as Food } from "../../../../assets/auth-slides/food.svg";
-import { ReactComponent as Sidney } from "../../../../assets/auth-slides/sidney.svg";
-import { ReactComponent as Woman } from "../../../../assets/auth-slides/woman.svg";
+import { ReactComponent as Food } from "../../../../../assets/auth-slides/food.svg";
+import { ReactComponent as Sidney } from "../../../../../assets/auth-slides/sidney.svg";
+import { ReactComponent as Woman } from "../../../../../assets/auth-slides/woman.svg";
 
 const Carousel = () => {
   const [page, setPage] = React.useState(0);

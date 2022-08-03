@@ -1,9 +1,9 @@
 import React from "react";
-import Text from "../../../../components/Inputs/Text";
+import Text from "../../../../../components/Inputs/Text";
 import "./Form.scss";
-import { ReactComponent as EmailIcon } from "../../../../assets/mail.svg";
-import { ReactComponent as LockIcon } from "../../../../assets/lock.svg";
-import Button from "../../../../components/Inputs/Button";
+import { ReactComponent as EmailIcon } from "../../../../../assets/mail.svg";
+import { ReactComponent as LockIcon } from "../../../../../assets/lock.svg";
+import Button from "../../../../../components/Inputs/Button";
 
 export type FormProps = {
   onSubmit: (email: string, password: string) => Promise<void>;
