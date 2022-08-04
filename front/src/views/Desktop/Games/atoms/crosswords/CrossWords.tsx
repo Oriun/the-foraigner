@@ -17,19 +17,38 @@ const CrossWords = () => {
     fromUser,
     isHighlighted,
     getIndice,
-    setData
+    setData,
+    click,
+    type,
+    erase,
+    current,
+    jump
   } = useCrosswords();
 
   useEffect(() => {
     if (!id) return navigate(-1);
     getExercise<CrosswordsData>(id).then((res) => {
-      console.log(res);
       setData(res);
     });
   }, [id]);
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const letter = e.key.toUpperCase();
+      if (ALPHABET.includes(letter)) {
+        type(letter);
+      } else if (letter === "BACKSPACE") {
+        erase();
+      } else if (letter === "TAB") {
+        jump(current!.indice + (e.shiftKey ? -1 : 1));
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [type, current, erase, jump]);
 
   return (
     <main className="crosswords">
+      <img src="/img/crosswords.svg" alt="background" className="crosswords-bg"/>
       <div className="crosswords-details">
         <h1 className="section-title">Mot croisés débutant #1</h1>
         <h4 className="section-head">
@@ -39,7 +58,7 @@ const CrossWords = () => {
         <p className="definition">
           {definitions.map((txt, i) => (
             <span key={`${txt}-${i}`} className="big-paragraph">
-              {i+1}. {txt}
+              {i + 1}. {txt}
             </span>
           ))}
         </p>
@@ -70,6 +89,7 @@ const CrossWords = () => {
                     highlighted={isHighlighted(x, y)}
                     indice={getIndice(x, y)}
                     blocked={column.blocked}
+                    onClick={() => click(x, y)}
                   />
                 );
               })}

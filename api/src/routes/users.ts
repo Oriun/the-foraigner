@@ -1,8 +1,8 @@
 import { Router } from "express";
 const UserRouter = Router()
-import bcrypt from "bcrypt";
 import AuthGuard from "../token";
 import User from "../models/User"
+import { compare, hash } from "../services/bcrypt";
 
 // @route GET api/users
 // @description Get all users
@@ -33,8 +33,7 @@ UserRouter.put("/changepass/:id", AuthGuard,  (req, res) => {
         message: "Minimum eight characters, at least one letter and one numbers",
       });
     }
-    const salt = bcrypt.genSaltSync();
-    req.body.password = bcrypt.hashSync(req.body.password, salt);
+    req.body.password = hash(req.body.password);
   
     User.findByIdAndUpdate(req.params.id, req.body)
       .then((user) => res.json({ msg: "password modified successfully" }))
@@ -60,8 +59,7 @@ UserRouter.post("/register", (req, res) => {
       message: "Minimum eight characters, at least one letter and one numbers",
     });
   }
-  const salt = bcrypt.genSaltSync();
-  req.body.password = bcrypt.hashSync(req.body.password, salt);
+  req.body.password = hash(req.body.password);
 
   User.create(req.body)
     .then((user) => res.json({ msg: "user added successfully" }))
@@ -82,7 +80,7 @@ UserRouter.post("/login", async (request, response) => {
       .send({ message: "The username does not exist" });
   }
 
-  if (!bcrypt.compareSync(request.body.password, user.password)) {
+  if (!compare(request.body.password, user.password)) {
     return response.status(200).send({ message: "The password is invalid" });
   }
   response.send({

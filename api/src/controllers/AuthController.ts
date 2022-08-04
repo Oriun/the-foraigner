@@ -1,5 +1,5 @@
 
-import bcrypt from "bcrypt";
+import { hash, compare } from "../services/bcrypt";
 import Credentials from "../models/Credentials";
 import { createUserSession, deleteUserSession } from "../models/Redis";
 import { BadRequest, NotFound, UnAuthorized, Unexpected } from "../views/Errors";
@@ -17,7 +17,7 @@ export const register: RequestHandler = async (req: AuthedRequest, res) => {
     try {
         const { password, email, admin } = req.body
         /* Hashing the password. */
-        const hashed = await bcrypt.hash(password, 10)
+        const hashed = await hash(password)
         /* Checking if the user is an admin and if the user is trying to create an admin. */
         const adminCreation = req.user?.admin === true && admin
         /* Creating a new credential object and saving it to the database. */
@@ -84,7 +84,7 @@ export const login: RequestHandler = async function (req, res) {
 
         /* Comparing the password that the user entered with the password that is stored in the
         database. */
-        const passOk = await bcrypt.compare(password, credential.password);
+        const passOk = await compare(password, credential.password);
         if (!passOk) return UnAuthorized(res, "Invalid password");
 
         /* Creating a session for the user. */

@@ -6,12 +6,12 @@
     padding: 2px;
     background-color: var(--isabelline);
     position: relative;
-
+    cursor:pointer;
     >div.bg {
         height: calc(100% - 4px);
         width: calc(100% - 4px);
         background: var(--isabelline);
-        border: 1.5px solid var(--border);
+        border: 1px solid var(--border);
         border-radius: 3px;
         position: absolute;
         z-index: 0;
@@ -45,6 +45,7 @@
     }
 
     &.blocked {
+        cursor: default;
         div.content {
             display: none;
         }
@@ -56,6 +57,7 @@
     }
 
     &.header {
+        cursor: default;
         >div {
             opacity: .3;
         }
@@ -63,6 +65,7 @@
     &.highlighted {
         div.bg {
             border-color: var(--maximum-blue-green);
+            border-width: 2px;
         }
     }
 }
