@@ -36,6 +36,7 @@ export const register: RequestHandler = async (req: AuthedRequest, res) => {
             .cookie(sessionCookieName, sessionId, {
                 maxAge: oneDayInMilliseconds,
                 httpOnly: true,
+                sameSite: "lax"
             }).send()
     } catch (err: unknown) {
         if ((err as Error)?.message?.startsWith('E11000')) {
@@ -96,6 +97,7 @@ export const login: RequestHandler = async function (req, res) {
             .cookie(sessionCookieName, sessionId, {
                 maxAge: oneDayInMilliseconds,
                 httpOnly: true,
+                sameSite: "lax"
             })
             /* Returning the credential object to the user. */
             .json(credential.toObject());

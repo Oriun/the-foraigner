@@ -104,6 +104,13 @@ button {
   line-height: 33px;
 }
 
+.big-paragraph {
+  font-family: var(--nunito-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
 .paragraph {
   font-family: var(--nunito-sans);
   font-style: normal;

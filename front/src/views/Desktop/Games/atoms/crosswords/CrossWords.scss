@@ -10,19 +10,25 @@ main.crosswords {
     gap: calc(var(--column) + var(--col-gutter));
     > div.crosswords-grid{
         display: grid;
-        aspect-ratio: 1;
+        // aspect-ratio: 1;
         height: 100%;
+        gap: 0;
+        place-items: stretch;
+        place-content: stretch;
     }
     >div.crosswords-details {
         max-width: calc(4 * var(--column) + 3 * var(--col-gutter)) ;
         h1 {
             margin-bottom: 20px;
         }
-        p {
+        h4 {
             margin-bottom: 56px;
         }
-        ol {
+        p {
             margin-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
     }
 }

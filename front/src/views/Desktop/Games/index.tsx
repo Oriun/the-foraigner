@@ -12,7 +12,7 @@ const Games = () => {
       <Routes>
         <Route path="crosswords/:id" element={<CrossWords />} />
         {/* For demo, redirect to crosswords #1 */}
-        <Route path="*" element={<Navigate to="crosswords/62eb04465f3e086c7a54c840" />} />
+        <Route path="*" element={<Navigate to="crosswords/62eb1aafd72687d5d6bdd6e5" />} />
       </Routes>
   );
 };
