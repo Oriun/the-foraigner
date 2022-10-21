@@ -1,0 +1,152 @@
+.flashcardPage
+{
+
+}
+
+.bandeau
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.triangleD {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 300px;
+    border-color: transparent transparent #f4d1ae transparent;
+    transform: rotate(45deg);
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: -10%;
+    margin-top: -10%;
+  }
+
+
+  
+.triangleG {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 300px;
+    border-color: transparent transparent #f4d1ae transparent;
+    transform: rotate(-135deg);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-left: -25%;
+    margin-bottom: -29%;
+  }
+
+  .logoTop
+  {
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  .title
+  {
+    text-align: center;
+  }
+
+  .title p
+  {
+    color: #12263A;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .hautDroite
+  {
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    margin: 2% 2% 0 0;
+  }
+
+  .titleContain
+  {
+    display: flex;
+  }
+
+  .texte
+  {
+    width: 45%;
+    margin-left: 5%;
+  }
+
+  .texte1
+  {
+    margin-top: 10%;
+    font-size: large;
+  }
+
+  .buttonCustom
+  {
+    background-color: #12263a;
+    color: white;
+    border-radius: 30px;
+    padding: 5px;
+    height: 44px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .buttonInt
+  {
+    width: 50px;
+    height: 50px;
+    margin-left: 8%;
+    margin-top: 7%;
+  }
+
+  .imgGame
+  {
+    width: auto;
+    height: 60%;
+    margin-top: 4%;
+    margin-left: 15%;
+    position: relative;
+  }
+
+  .buttonChoose
+  {
+    text-align: center
+  }
+
+  .buttonChoose button
+  {
+    width: 350px;
+    background-color: #06BCC1;
+    padding: 5% 20%;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 6px;
+    margin: 7px 0px;
+  }
+
+.validate
+{
+    text-align: center
+}
+
+  .validate button
+  {
+    width: 300px;
+    background-color: #12263A;
+    padding: 3% 20%;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 15px;
+    margin: 7px 0px;
+  }
+
+.game
+{
+    display: flex;
+}

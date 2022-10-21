@@ -4,6 +4,7 @@ import Auth from "./views/Desktop/Auth";
 import Landing from "./views/Landing";
 import { DesignGuidelines } from "@oriun/gray-cat";
 import Games from "./views/Desktop/Games";
+import FlashCard from "./views/Desktop/FlashCard"
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const Web = () => {
         <Route index element={<Landing />} />
         <Route path="auth" element={<Auth />} />
         <Route path="app/*" element={<App />} />
+        <Route path="flashcard" element={<FlashCard />} />
       </Routes>
     </BrowserRouter>
   );
