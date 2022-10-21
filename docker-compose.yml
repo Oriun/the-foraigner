@@ -32,6 +32,8 @@ services:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER:-foraigner_cp4FDt}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS:-aovxKafANoIU3qPl}
       MONGO_INITDB_DATABASE: ${MONGO_DB:-foraigner}
+    ports:
+      - 27017:27017
   redis:
     image: redis:6.2-alpine
   
