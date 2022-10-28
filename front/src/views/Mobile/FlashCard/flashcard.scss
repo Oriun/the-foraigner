@@ -63,14 +63,14 @@
   .hautDroite
   {
     z-index: 100;
-    width: 50px;
+    width: 100px;
     height: 50px;
     margin: 2% 2% 0 0;
   }
 
   .titleContain
   {
-    display: flex;
+    text-align: -webkit-right;
   }
 
   .texte
@@ -102,17 +102,16 @@
   {
     width: 50px;
     height: 50px;
-    margin-left: 8%;
+    margin-right: 5%;
     margin-top: 7%;
   }
 
   .imgGame
   {
-    width: 70%;
+    width: 35%;
     height: auto;
-    margin-top: 4%;
-    margin-left: 17%;
-    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .buttonChoose
@@ -122,9 +121,8 @@
 
   .buttonChoose button
   {
-    width: 70%;
+    width: 45%;
     background-color: #06BCC1;
-    padding: 3%;
     color: white;
     font-size: larger;
     font-weight: bold;
@@ -132,7 +130,9 @@
     margin: 7px 0px;
     border: none;
     box-shadow: 0px 0px 2px black;
-    max-width: 525px;
+    margin: 5px;
+    height: 33vh;
+    cursor: pointer;
   }
 
 .validate
@@ -151,26 +151,41 @@
     border-radius: 15px;
     margin: 7px 0px;
     max-width: 450px;
-    cursor: pointer;
+
   }
 
 .game
 {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
 }
 
-// .divImg
-// {
-//   width: 60%;
-// }
+.divImg
+{
+  height: 69vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 .divButton
 {
-  width: 60%;
+  width: 100%;
 }
 
 .exemple
 {
   margin-top: 5%;
+}
+
+.hautDroite div:first-child
+{
+  display: flex;
+}
+
+.hautDroite div p
+{
+  margin: 5px;
 }
