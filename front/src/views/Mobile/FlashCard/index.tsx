@@ -6,20 +6,7 @@ import "./flashcard.scss";
 import logo from "./asset/Theforaigner.png"
 import img from "./asset/Group.png"
 
-
-
-type FlashCardMobile = {
-    children: React.ReactNode;
-    width: number;
-};
-
-
-const FlashCardMob: React.FC<FlashCardMobile> = ({ children, width }) => {
-const ref = React.useRef<HTMLDivElement>(null);
-React.useEffect(() => {
-    if (!ref.current) return;
-    ref.current.style.setProperty("--width", width + "px");
-}, [width]);
+const FlashCardMob : React.FC = () => {
 return (
     <div className="flashcardPage">
         <div>
