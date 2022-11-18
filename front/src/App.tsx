@@ -7,7 +7,7 @@ import Games from "./views/Desktop/Games";
 import FlashCardMob from "./views/Mobile/FlashCard"
 import Dropzonetest from './views/Desktop/testDrag'
 
-// import FlashCard from "./views/Desktop/FlashCard"
+import FlashCard from "./views/Desktop/FlashCard"
 
 
 const App = () => {
@@ -28,7 +28,8 @@ const Web = () => {
         <Route index element={<Landing />} />
         <Route path="auth" element={<Auth />} />
         <Route path="app/*" element={<App />} />
-        <Route path="flashcard" element={<FlashCardMob />} />
+        <Route path="flashcardMob" element={<FlashCardMob />} />
+        {/* <Route path="flashcard" element={<FlashCard />} /> */}
         <Route path="testDrag" element={<Dropzonetest />} />
       </Routes>
     </BrowserRouter>
