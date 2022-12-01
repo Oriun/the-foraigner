@@ -4,6 +4,7 @@ import Carousel from "./atoms/carousel/Carousel";
 import Login from "./atoms/Login";
 import Register from "./atoms/Register";
 import "./Auth.scss";
+import Form from "./atoms/from/Form"
 
 type AuthViewMode = "login" | "register";
 

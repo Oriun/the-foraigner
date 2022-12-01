@@ -38,6 +38,7 @@ const Form: React.FC<FormProps> = ({ onSubmit, title, head, tail }) => {
       return;
     }
     try {
+      console.log("c'est ici");
       onSubmit(email, password);
     } catch (err) {
       /**
