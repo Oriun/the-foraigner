@@ -2,13 +2,16 @@ import { useDropzone } from "react-dropzone";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Dropzone from 'react-dropzone'
 
-import React , {useCallback}  from "react";
+import React , {useCallback , useState}  from "react";
 
 //img
 import logo from "./asset/Theforaigner.png"
 import img from "./../FlashCard/asset/Group.png"
 
 import Draggable from "react-draggable";
+
+import "./testdrag.scss"; 
+
 
 function MyDropzone() {
     const onDrop = useCallback(acceptedFiles => {
@@ -23,10 +26,96 @@ function MyDropzone() {
     // const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
   
 
+    const json = {
+
+        "name":"FlashCard Test N°1",
+    
+        "data":[
+            {
+                "image": "https://www.example.com/image.jpg",
+                "correct_answer":"Response A",
+                "answers":[
+                    "Response A",
+                    "Response B",
+                    "Response C",
+                    "Response D"
+                ]
+            },
+            {
+                "image": "https://www.example.com/image-2.jpg",
+                "correct_answer":"Response B",
+                "answers":[
+                    "Response A",
+                    "Response B",
+                    "Response C",
+                    "Response D"
+                ]
+            },
+            {
+                "image": "https://www.example.com/image-2.jpg",
+                "correct_answer":"Response D",
+                "answers":[
+                    "Response A",
+                    "Response B",
+                    "Response C",
+                    "Response D"
+                ]
+            }
+        ]
+    }
+
+    var [answersNum, setanswersNum] = useState<number>(0);
+    const [answerResponse, setanswerResponse] = useState("");
+
+    // const [stylecase , setstylecase] = useState(['' , '' , '' , ''])
+    const [stylecase , setstylecase] = useState<any[]>([])
+
+    const [flagColor , setflagColor] = useState(false)
+
+
+
     const test = (result : any)=>
     {
-        console.log(result)
+        //recup num question
+        console.log(answersNum , result)
+        var answer = answersNum
+        var reponse = json.data[answer].answers[result]
+        console.log("response :" + json.data[answer].answers[result])
+        console.log("expected response :" + json.data[answer].correct_answer)
 
+        setanswerResponse(json.data[answer].correct_answer)
+        if(json.data[answer].correct_answer == reponse)
+        {
+            console.log("on est bon")
+        }
+
+        colorcase(answer ,  json.data[answer].correct_answer)
+        setflagColor(true)
+
+        setTimeout(() => {
+            setflagColor(false)
+            setanswersNum(Number(answersNum) + 1)
+            setstylecase([])
+        }, 5000);
+        //change question
+        // setanswersNum(answersNum + 1)
+    }
+
+    const colorcase = (answer : any , expected : any) =>
+    {
+        var arrayColor : any[] = [];
+        json.data[answer].answers.forEach((element  , index) => {
+            if(element == expected)
+            {
+                arrayColor.push("3px solid green")
+            }
+            else
+            {
+                arrayColor.push("3px solid red")
+            }        
+        }); 
+        setstylecase(arrayColor);
+        // setstylecase(arrayColor)
     }
 
     return (
@@ -39,11 +128,30 @@ function MyDropzone() {
                 <img src={img} alt="test"  style={{width: "100px",height: "100px"}}/>
             </Draggable>
 
+            {/* Mettre un style dynamic  */}
+
+            <Dropzone onDrop={acceptedFiles => test("0")}>
+                {({getRootProps, getInputProps , isDragActive}) => (
+                    <div className="card" {...getRootProps()} style={{border : flagColor == true ? stylecase[0] : ""}}>
+                        <input {...getInputProps({
+                            onClick: e => test("Response A"),
+                            role: 'button',
+                            'aria-label': 'drag and drop area',
+                        })} />
+                        {
+                        isDragActive ?
+                            <p>Drop the files here ...</p> :
+                            <p>Drag 'n' drop some files here, or click to select files</p>
+                        }
+                    </div>
+                )}
+            </Dropzone>
+
             <Dropzone onDrop={acceptedFiles => test("1")}>
                 {({getRootProps, getInputProps , isDragActive}) => (
-                    <div {...getRootProps()} style={{width: "100px",border: "1px solid",height: "100px"}}>
+                    <div {...getRootProps()} className="card" style={{border : flagColor == true ? stylecase[1] : ""}}>
                         <input {...getInputProps({
-                            onClick: e => test("1"),
+                            onClick: e => test("Response B"),
                             role: 'button',
                             'aria-label': 'drag and drop area',
                         })} />
@@ -58,9 +166,9 @@ function MyDropzone() {
 
             <Dropzone onDrop={acceptedFiles => test("2")}>
                 {({getRootProps, getInputProps , isDragActive}) => (
-                    <div {...getRootProps()} style={{width: "100px",border: "1px solid",height: "100px"}}>
+                    <div {...getRootProps()} className="card" style={{border : flagColor == true ? stylecase[2] : ""}}>
                         <input {...getInputProps({
-                            onClick: e => test("1"),
+                            onClick: e => test("Response C"),
                             role: 'button',
                             'aria-label': 'drag and drop area',
                         })} />
@@ -75,9 +183,9 @@ function MyDropzone() {
 
             <Dropzone onDrop={acceptedFiles => test("3")}>
                 {({getRootProps, getInputProps , isDragActive}) => (
-                    <div {...getRootProps()} style={{width: "100px",border: "1px solid",height: "100px"}}>
+                    <div {...getRootProps()} className="card" style={{border : flagColor == true ? stylecase[3] : ""}}>
                         <input {...getInputProps({
-                            onClick: e => test("1"),
+                            onClick: e => test("Response D"),
                             role: 'button',
                             'aria-label': 'drag and drop area',
                         })} />
@@ -91,6 +199,9 @@ function MyDropzone() {
             </Dropzone>
 
 
+            <div>
+                <p>La bonne reponse etait la reponse : {answerResponse}</p>
+            </div>
         </div>
     )
   }
