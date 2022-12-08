@@ -66,6 +66,8 @@ function MyDropzone() {
 
     var [answersNum, setanswersNum] = useState<number>(0);
     const [answerResponse, setanswerResponse] = useState("");
+    const [flagResponse, setflagResponse] = useState(false);
+
 
     // const [stylecase , setstylecase] = useState(['' , '' , '' , ''])
     const [stylecase , setstylecase] = useState<any[]>([])
@@ -87,12 +89,15 @@ function MyDropzone() {
         if(json.data[answer].correct_answer == reponse)
         {
             console.log("on est bon")
+            setflagResponse(true)
         }
 
         colorcase(answer ,  json.data[answer].correct_answer)
         setflagColor(true)
 
         setTimeout(() => {
+            setanswerResponse("")
+            setflagResponse(false)
             setflagColor(false)
             setanswersNum(Number(answersNum) + 1)
             setstylecase([])
@@ -118,6 +123,21 @@ function MyDropzone() {
         // setstylecase(arrayColor)
     }
 
+    const ReturnResponse = ()=>
+    {
+        if(answerResponse != "")
+        {
+            if(flagResponse != false)
+            {
+                return <p className="ResponseTexte">Bravo vous avez la bonne réponse</p>
+            }
+            else
+            {
+                return <p className="ResponseTexte">La bonne reponse etait la reponse : {answerResponse}</p>
+            }
+        }
+    }
+
     return (
         <div>
             <Draggable
@@ -140,8 +160,8 @@ function MyDropzone() {
                         })} />
                         {
                         isDragActive ?
-                            <p>Drop the files here ...</p> :
-                            <p>Drag 'n' drop some files here, or click to select files</p>
+                            <p className="CheckReponse">Je valide la reponse A</p> :
+                            <p className="Response">A</p>
                         }
                     </div>
                 )}
@@ -157,8 +177,8 @@ function MyDropzone() {
                         })} />
                         {
                         isDragActive ?
-                            <p>Drop the files here ...</p> :
-                            <p>Drag 'n' drop some files here, or click to select files</p>
+                            <p className="CheckReponse">Je valide la reponse B</p> :
+                            <p className="Response">B</p>
                         }
                     </div>
                 )}
@@ -174,8 +194,8 @@ function MyDropzone() {
                         })} />
                         {
                         isDragActive ?
-                            <p>Drop the files here ...</p> :
-                            <p>Drag 'n' drop some files here, or click to select files</p>
+                            <p className="CheckReponse">Je valide la reponse C</p> :
+                            <p className="Response">C</p>
                         }
                     </div>
                 )}
@@ -191,8 +211,8 @@ function MyDropzone() {
                         })} />
                         {
                         isDragActive ?
-                            <p>Drop the files here ...</p> :
-                            <p>Drag 'n' drop some files here, or click to select files</p>
+                            <p className="CheckReponse">Je valide la reponse D</p> :
+                            <p className="Response">D</p>
                         }
                     </div>
                 )}
@@ -200,7 +220,7 @@ function MyDropzone() {
 
 
             <div>
-                <p>La bonne reponse etait la reponse : {answerResponse}</p>
+                {ReturnResponse()}
             </div>
         </div>
     )
