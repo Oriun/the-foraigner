@@ -7,8 +7,9 @@ import img from "./asset/Group.png"
 
 
 
-
 const FlashCard : React.FC = () => {
+
+
   return (
 <div>
     <div className="flashcardPage">
