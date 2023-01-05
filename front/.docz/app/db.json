@@ -1,0 +1,87 @@
+{
+  "config": {
+    "title": "The Foraigner",
+    "description": "My awesome app using docz",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": null,
+    "native": false,
+    "themeConfig": {},
+    "separator": "-"
+  },
+  "entries": [
+    {
+      "key": "docs.mdx",
+      "value": {
+        "name": "Hello world 2",
+        "route": "/src/components/views/Desktop/FlashCard/index.tsx",
+        "id": "25053fa47ba195f3649324c83228a7dd",
+        "filepath": "docs.mdx",
+        "fullpath": "D:\\Epitech\\ESP\\the-foreignerNew\\the-foraigner\\front\\docs.mdx",
+        "link": "",
+        "hidden": false,
+        "slug": "docs",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "hello-world",
+            "depth": 1,
+            "value": "Hello world"
+          }
+        ]
+      }
+    },
+    {
+      "key": "README.md",
+      "value": {
+        "id": "04c6e90faac2675aa89e2176d2eec7d8",
+        "filepath": "README.md",
+        "fullpath": "D:\\Epitech\\ESP\\the-foreignerNew\\the-foraigner\\front\\README.md",
+        "link": "",
+        "hidden": false,
+        "slug": "readme",
+        "route": "/readme",
+        "name": "Readme",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "getting-started-with-create-react-app",
+            "depth": 1,
+            "value": "Getting Started with Create React App"
+          },
+          {
+            "slug": "available-scripts",
+            "depth": 2,
+            "value": "Available Scripts"
+          },
+          {
+            "slug": "npm-start",
+            "depth": 3,
+            "value": "npm start"
+          },
+          {
+            "slug": "npm-test",
+            "depth": 3,
+            "value": "npm test"
+          },
+          {
+            "slug": "npm-run-build",
+            "depth": 3,
+            "value": "npm run build"
+          },
+          {
+            "slug": "npm-run-eject",
+            "depth": 3,
+            "value": "npm run eject"
+          },
+          {
+            "slug": "learn-more",
+            "depth": 2,
+            "value": "Learn More"
+          }
+        ]
+      }
+    }
+  ],
+  "props": []
+}

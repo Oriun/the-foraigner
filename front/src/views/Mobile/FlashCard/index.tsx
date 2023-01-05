@@ -73,8 +73,7 @@ const FlashCardMob : React.FC = () => {
   
       const [flagColor , setflagColor] = useState(false)
   
-  
-  
+      
       const ChooseResponse = (result : any)=>
       {
           //recup num question
