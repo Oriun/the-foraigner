@@ -5,12 +5,12 @@ import { APIError } from "../../../../services/Utils";
 import Form from "./from/Form";
 
 const Register = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const submit = async (email: string, password: string) => {
     console.log("register", { email, password });
     try {
-      await register(email, password);
-      navigate('/app')
+      //await register(email, password);
+      navigate('/first')
     } catch (err) {
       const e = err as APIError;
       /**
