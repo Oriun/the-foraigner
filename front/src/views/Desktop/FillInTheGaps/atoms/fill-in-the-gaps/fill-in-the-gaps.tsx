@@ -1,90 +1,172 @@
-import React, { useState, useMemo, Fragment, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import "./fill-in-the-gaps.scss";
+import { data } from "./data";
+import StandardButton from "../../../../../components/StandardButton";
+import clsx from "clsx";
+import { Modal, ModalHeader, ModalBody } from "reactstrap";
 
-
-const fillInTheGaps = () => {
-    const response = ["would", "open", "ran", "won", "swim", "is", "played", "cooked", "became", "show"];
-
-    function valideWord() {
-      for(let i = 1; i <= 10; i++) {
-        const element = document.getElementById('s' + i);
-        //console.log(element?.);
-      }
-    }
-
-    const handleSubmit = (event: any) => {
-      event.preventDefault();
-    
-      // const tempPlayer = new FormData(event.target);
-      // console.log(tempPlayer)
-      // for (let [key, value] of tempPlayer.entries()) {
-      //   console.log(key, value);
-      // }
-      let erreur = 0;
-      const s1 = event.target.s1.value;
-      const s2 = event.target.s2.value;
-      const s3 = event.target.s3.value;
-      const s4 = event.target.s4.value;      
-      const s5 = event.target.s5.value;
-      const s6 = event.target.s6.value;
-      const s7 = event.target.s7.value;
-      const s8 = event.target.s8.value;
-      const s9 = event.target.s9.value;
-      const s10 = event.target.s10.value;
-
-      if(s1 !== response[0]) {
-        erreur = erreur + 1
-      }
-      if(s1 !== response[0]) {
-        erreur = erreur + 1
-      }
-      if(s1 !== response[0]) {
-        erreur = erreur + 1
-      }
-      if(s1 !== response[0]) {
-        erreur = erreur + 1
-      }
-
-
-
-      event.target.reset();
-
-    };
-    
-    return (
-        <main className="fillIn">
-          <div>
-            <h1 className="section-title">Texte à trou débutant #1</h1>
-            <div className="section-sentence">
-              <form onSubmit={handleSubmit}>
-              <p>1. Sonia <input id="s1" className="petitInput" type="text"></input> (be) the most beautiful girl in my campus.</p>
-              <br/>
-              <p>2. Look at the door! Tom <input id="s2" className="petitInput" type="text"></input> (open) it now.</p>
-              <br/>
-              <p>3. I <input id="s3" className="petitInput" type="text"></input> (run) as soon as they told me so.</p>
-              <br/>
-              <p>4. Koffi and Mary <input id="s4" className="petitInput" type="text"></input> (win) National cup of Tennis two months ago.</p>
-              <br/>
-              <p>5. We <input id="s5" className="petitInput" type="text"></input> (never swim) in the Pacific Ocean. I would like to go there.</p>
-              <br/>
-              <p>6. Joe didn't go to Germany with USA football team.He wishes he <input id="s6" className="petitInput" type="text"></input> (be) their goalkeeper.</p>
-              <br/>
-              <p>7. When I <input id="s7" className="petitInput" type="text"></input> (play) tennis last morning,I won every match.</p>
-              <br/>
-              <p>8. My sister often <input id="s8" className="petitInput" type="text"></input> (cook) delicious cakes.</p>
-              <br/>
-              <p>9. I <input id="s9" className="petitInput" type="text"></input> (become) a pilot if I was very good at Mathematics.</p>
-              <br/>
-              <p>10. Anna <input id="s10" className="petitInput" type="text"></input> (show) me the right way to come back from school on Mondays.</p>
-              <br/>
-              <input onClick={valideWord} type="submit" value="Valider"></input>
-              </form>           
-            </div>
-          </div>
-        </main>
-    );
+type PopUpProps = {
+  isOpen: boolean;
+  status: boolean;
+  next: () => void;
+  reset: () => void;
+};
+const PopUp: React.FC<PopUpProps> = ({ isOpen, status, next, reset }) => {
+  return (
+    <div>
+      <Modal isOpen={isOpen} size="lg">
+        <ModalHeader>
+          <h1>Fin du jeu</h1>
+        </ModalHeader>
+        <ModalBody></ModalBody>
+      </Modal>
+    </div>
+  );
 };
 
+type LineProps = {
+  data: string[];
+  value: string[];
+  onChange: (value: string[]) => void;
+  isCorrect: boolean[];
+  idx: number;
+};
+const Line: React.FC<LineProps> = ({
+  data,
+  value,
+  onChange,
+  isCorrect,
+  idx,
+}) => {
+  function update(index: number) {
+    return function (event: React.ChangeEvent<HTMLInputElement>) {
+      const next = [...value];
+      next[index] = event.target.value;
+      onChange(next);
+    };
+  }
+  return (
+    <div>
+      <span>{idx}. </span>
+      {data.map((word, index) => {
+        if (index % 2 === 1) {
+          const realIndex = Math.floor(index / 2);
+          return (
+            <input
+              key={word + index}
+              className={clsx("FillInput", {
+                correct: isCorrect[realIndex],
+                incorrect: isCorrect[realIndex] === false,
+              })}
+              type="text"
+              value={value[realIndex] ?? ""}
+              onChange={update(realIndex)}
+            />
+          );
+        }
+        return <span key={word + index}>{word}</span>;
+      })}
+    </div>
+  );
+};
 
-export default fillInTheGaps;
+type FillInTheGapsProps = {
+  game: string[][];
+  next: () => void;
+  reset: () => void;
+};
+const FillInTheGaps: React.FC<FillInTheGapsProps> = ({ game, next, reset }) => {
+  const [lives, setLives] = useState(3);
+  const [value, setValue] = useState<string[][]>([]);
+  const [isCorrect, setIsCorrect] = useState<boolean[][]>([]);
+  const [isOpen, setIsOpen] = useState<boolean>();
+
+  function updateValues(index: number) {
+    return function (newValue: string[]) {
+      setValue((prev) => {
+        const next = [...prev];
+        while (next.length < index + 1) {
+          next.push([]);
+        }
+        next[index] = newValue;
+        return next;
+      });
+    };
+  }
+  function submit() {
+    if (!lives) return;
+    const newCorrect = game.map((line, index) => {
+      if (!value[index]?.length)
+        return line.filter((_, index) => index % 2).map(() => false);
+      return value[index].map((word, index) => {
+        return word === line[index * 2 + 1];
+      });
+    });
+    setIsCorrect(newCorrect);
+    if (!newCorrect.every((line) => line.every((word) => word))) {
+      setLives((prev) => prev - 1);
+    } else {
+      setIsOpen(true);
+    }
+  }
+  useEffect(() => {
+    if (lives === 0) {
+      setIsOpen(true);
+    }
+  }, [lives]);
+  return (
+    <main className="fillIn">
+      <div className="fillIn__head">
+        <h1 className="section-title">Conjugaison débutant #1</h1>
+        <h4 className="section-head">
+          Complétez les phrases avec les verbes conjugués au bon temps.
+        </h4>
+        <div>Vies restantes : {lives}/3</div>
+      </div>
+      <div className="fillIn__content">
+        {game.map((line, index) => {
+          return (
+            <Line
+              key={line + "" + index}
+              data={line}
+              idx={index}
+              isCorrect={isCorrect[index] ?? []}
+              onChange={updateValues(index)}
+              value={value[index] ?? []}
+            />
+          );
+        })}
+      </div>
+      <StandardButton
+        onClick={submit}
+        className={clsx("fillIn__submit", {
+          "fillIn__submit--disabled": !lives,
+        })}
+        text="Valider"
+      />
+      <PopUp
+        isOpen={!!isOpen}
+        status={isCorrect.every((line) => line.every((word) => word))}
+        next={next}
+        reset={reset}
+      />
+    </main>
+  );
+};
+
+const GameView: React.FC = () => {
+  const [key, setKey] = useState(0);
+  const [gameIndex, setGameIndex] = useState(0);
+  const game = data[gameIndex];
+  if (!game) return <div>Stop gaming around and read another lesson</div>;
+  function reset() {
+    setKey((prev) => prev + 1);
+  }
+  function next() {
+    setGameIndex((prev) => prev + 1);
+    reset();
+  }
+  return <FillInTheGaps game={game} key={key} reset={reset} next={next} />;
+};
+
+export default GameView;

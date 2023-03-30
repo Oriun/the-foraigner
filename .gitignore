@@ -2,3 +2,4 @@
 !.env.example
 mongo_data
 log
+next

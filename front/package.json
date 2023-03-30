@@ -15,6 +15,8 @@
     "@types/node": "^16.11.22",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
+    "bootstrap": "^5.2.3",
+    "clsx": "^1.2.1",
     "core": "link:@@babel/core",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -23,6 +25,7 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.0",
+    "reactstrap": "^9.1.8",
     "sass": "^1.49.7",
     "typescript": "^4.5.5",
     "web-vitals": "^2.1.4"
