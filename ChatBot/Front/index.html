@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Imporant meta information to make the page as rigid as possible on mobiles, to avoid unintentional zooming on the page itself  -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>Character Tutorial</title>
+</head>
+<body>
+
+  <!-- The canvas element is used to draw the 3D scene -->
+  <canvas id="c" style="    position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  "></canvas>
+  <div class="loading" id="js-loader"><div class="loader"></div></div>
+
+
+  <div class="wrapper">
+      <div class="StartAudio">
+
+        <div style="display: flex ;justify-content: space-evenly;">
+          <div>
+            <h2 class="mb-3 text-light" style="text-align:center ; color: black;">Select Language</h2>
+          </div>
+          <div style="margin-top: auto;margin-bottom: auto;">
+            <select class="form-select bg-secondary text-light mt-2" id="select_dialect" style="width:100% ; margin-left: auto; margin-right: auto;">
+              <option value="French">fr</option>
+              <option value="en">en</option>
+              <option value="Spanish">esp</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <button id="start" class="btn btn-success styleButton">Start record</button>
+          <button id="stop" class="btn btn-danger styleButton" style="display: none;">Stop record</button>
+        </div>
+
+        <p id="status" class="lead mt-3 text-light" style="display: none ; text-align:center ; color: black;">Listenting ...</p>
+        <p id="load" class="lead mt-3 text-light" style="display: none ; text-align:center ; color: black;">En cours de traitement ...</p>
+
+        <div style="color: black; text-align:center ;">
+          <span id="final" class="text-light" style="color: black;"></span>
+          <span id="interim" class="text-secondary" style="color: black;"></span>
+        </div>
+      </div>
+
+      <div class="AllConv">
+        <div style="text-align: center;">
+          <p class="titleConv">The Foraigner</p>
+        </div>
+        <div id="conv">
+
+        </div>
+      </div>
+      <div class="text">
+        <div style="display: flex;justify-content: space-between;">
+          <div style="width: 100%;">
+            <input type="text" id="MsgWrite" placeholder="Veuillez écrire votre message ..."/>
+          </div>
+          <div>
+            <button class="btn btn-success" id="SendMsg">Envoyer</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
+
+<!-- The main Three.js file -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js'></script>
+
+<!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
+<script src='https://cdn.jsdelivr.net/gh/mrdoob/Three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
+
+<script src="animate.js"></script>
+
+<script type = "text/javascript" src="speechrecogniton.js"></script>
+
+
+
+
+
+<script>
+    // document.getElementById("buttonRecord").onclick = recordVoice;
+</script>
+
+
