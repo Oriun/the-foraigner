@@ -1,7 +1,0 @@
-pip install gTTS
-pip3 install pyttsx3 playsound
-
-
-//ia
-model gtp 3 
-https://www.twilio.com/blog/chatbot-gpt-3-openai-twilio-sms-python
