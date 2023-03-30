@@ -6,8 +6,11 @@ import { DesignGuidelines } from "@oriun/gray-cat";
 import Games from "./views/Desktop/Games";
 import FlashCardMob from "./views/Mobile/FlashCard"
 import Dropzonetest from './views/Desktop/testDrag'
-
 import FlashCard from "./views/Desktop/FlashCard"
+// import Gaps from "./views/Desktop/FillInTheGaps";
+// import First from "./views/Desktop/Auth/atoms/NewLogin/First";
+// import Second from "./views/Desktop/Auth/atoms/NewLogin/Second";
+// import Third from "./views/Desktop/Auth/atoms/NewLogin/Third";
 
 
 const App = () => {
@@ -15,6 +18,8 @@ const App = () => {
     <Routes>
       <Route path="games/*" element={<Games />} />
       <Route path="*" element={<Navigate to="games" />} />
+      {/* <Route path="lessons/*" element={<Gaps />} /> */}
+      <Route path="*" element={<Navigate to="lessons" />} />
     </Routes>
   )
 }
@@ -31,6 +36,9 @@ const Web = () => {
         <Route path="flashcardMob" element={<FlashCardMob />} />
         {/* <Route path="flashcard" element={<FlashCard />} /> */}
         <Route path="testDrag" element={<Dropzonetest />} />
+        {/* <Route path="first" element={<First />} />
+        <Route path="second" element={<Second />} />
+        <Route path="third" element={<Third />} /> */}
       </Routes>
     </BrowserRouter>
   );
