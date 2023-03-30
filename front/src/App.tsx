@@ -4,6 +4,7 @@ import Auth from "./views/Desktop/Auth";
 import Landing from "./views/Landing";
 import { DesignGuidelines } from "@oriun/gray-cat";
 import Games from "./views/Desktop/Games";
+import Gaps from "./views/Desktop/FillInTheGaps";
 import FlashCardMob from "./views/Mobile/FlashCard"
 import Dropzonetest from './views/Desktop/testDrag'
 import FlashCard from "./views/Desktop/FlashCard"
@@ -17,7 +18,7 @@ const App = () => {
     <Routes>
       <Route path="games/*" element={<Games />} />
       <Route path="*" element={<Navigate to="games" />} />
-      {/* <Route path="lessons/*" element={<Gaps />} /> */}
+      <Route path="lessons/*" element={<Gaps />} />
       <Route path="*" element={<Navigate to="lessons" />} />
     </Routes>
   )
