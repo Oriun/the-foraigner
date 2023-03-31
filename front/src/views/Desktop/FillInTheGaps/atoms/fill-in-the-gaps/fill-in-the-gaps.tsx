@@ -18,7 +18,7 @@ const PopUp: React.FC<PopUpProps> = ({ isOpen, status, next, reset }) => {
         <ModalHeader>
           <h1>Fin du jeu</h1>
         </ModalHeader>
-        <ModalBody></ModalBody>
+        <ModalBody><div><button onClick={next}>Next</button></div></ModalBody>
       </Modal>
     </div>
   );
