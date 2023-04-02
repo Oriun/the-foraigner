@@ -1,0 +1,25 @@
+.language_badge {
+  border: none;
+  padding: 4px 24px 4px 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: var(--prussian-blue);
+  &:hover {
+    background-color: var(--maximum-blue-green);
+  }
+  img {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+  }
+  span {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: #ffffff;
+    line-height: 24, 55px;
+  }
+}

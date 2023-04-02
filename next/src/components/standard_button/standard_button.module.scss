@@ -1,0 +1,18 @@
+.standard_button {
+  background-color: var(--prussian-blue);
+  height: 56px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  border: none;
+  font-family: var(--nunito-sans);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 25px;
+  padding: 0 32px;
+  &:hover {
+    background-color: var(--maximum-blue-green);
+  }
+}

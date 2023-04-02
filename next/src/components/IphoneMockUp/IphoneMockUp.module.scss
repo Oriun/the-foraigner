@@ -1,0 +1,28 @@
+.iphone_mockup {
+  --width: 524px;
+  width: var(--width);
+  max-width: var(--width);
+  min-width: var(--width);
+  $height: calc(var(--width) / 0.547544);
+  aspect-ratio: 0.547544;
+  position: relative;
+  padding: calc(0.029 * $height) calc(0.1 * var(--width)) calc(0.036 * $height)
+    calc(0.11 * var(--width));
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-grow: 0;
+  > img {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+.mockup_content {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 0.4644;
+}
