@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import "./flashcard.scss"; 
+import "./flashcardMob.scss"; 
 
 //img
 import logo from "./asset/Theforaigner.png"
@@ -8,6 +8,8 @@ import img from "./asset/Group.png"
 import React , {useCallback , useState}  from "react";
 import Draggable from "react-draggable";
 import Dropzone from 'react-dropzone'
+
+import { act } from "react-dom/test-utils";
 
 
 
@@ -112,15 +114,27 @@ const FlashCardMob : React.FC = () => {
               if(element == expected)
               {
                   arrayColor.push("5px solid green")
+                  return "true"
               }
               else
               {
                   arrayColor.push("5px solid red")
+                  return "false"
               }        
           }); 
           setstylecase(arrayColor);
           // setstylecase(arrayColor)
       }
+
+
+
+    //   it("test", () => {
+    //     act(() => {
+    //         colorcase("une chaise" , "une chaise")
+    //     });
+
+    //     expect(true).toBe(true);
+    // });
   
       const ReturnResponse = ()=>
       {
