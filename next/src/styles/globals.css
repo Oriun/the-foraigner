@@ -28,7 +28,9 @@ code {
 }
 html,
 body {
-  background-color: var(--isabelline);
+  /* background-color: var(--isabelline); */
+  background-color: white;
+
 }
 
 * {
