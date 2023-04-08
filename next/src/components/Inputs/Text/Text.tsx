@@ -30,6 +30,7 @@ const TextInput: React.FC<TextInputProps> = ({
       (timeout.current = setTimeout(() => {
         onChange(inputValue);
       }, 500));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputValue]);
   return (
     <div className={clsx(styles.text_input, className)}>

@@ -1,9 +1,9 @@
 name: Pipeline
 on:
   push:
-    branches:
-      - master
   workflow_dispatch:
+  workflow_call:
+
 jobs:
   build:
     if: github.repository == 'Oriun/the-foraigner'

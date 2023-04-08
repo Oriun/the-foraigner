@@ -1,9 +1,8 @@
 import React, { Fragment, useEffect } from "react";
-import { CrosswordsData, Exercise } from "@/services/Games";
+import { CrosswordsData } from "@/services/Games";
 import Tile from "./tile/tile";
 import styles from "./cross-words.module.scss";
 import useCrosswords from "@/hooks/useCrosswords";
-import { useRouter } from "next/router";
 
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -46,6 +45,7 @@ const CrossWords: React.FC<CrossWordsProps> = ({ data }) => {
 
   useEffect(() => {
     setData(data);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
   return (
     <main className={styles.crosswords}>

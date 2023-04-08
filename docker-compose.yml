@@ -3,26 +3,12 @@ services:
   front:
     restart: unless-stopped
     build:
-      context: ./front
-      args:
-        REACT_APP_API_BASE: ${API_BASE:-'http://localhost:8090'}
+      context: ./next
     ports:
       - '8089:80'
       # Api on port 8090 
     env_file:
       - .env
-  api:
-    restart: unless-stopped
-    build: ./api
-    env_file:
-      - .env
-    ports:
-      - '${API_PORT:-8090}:${API_PORT:-5000}'
-    depends_on:
-      - bdd
-      - redis
-    volumes:
-      - ${API_LOG:-./log}:/log
   bdd:
     image: mongo:5.0.4
     volumes:
@@ -36,5 +22,3 @@ services:
       - 27017:27017
   redis:
     image: redis:6.2-alpine
-  
-

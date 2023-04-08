@@ -1,14 +1,13 @@
 import CrossWords from "@/components/crosswords/cross-words";
 import FillInTheGaps from "@/components/fill-in-the-gaps/fill-in-the-gaps";
 import FlashCard from "@/components/flash-cards";
+
 import {
   CrosswordsData,
-  Exercise,
   FillInTheGapsData,
   FlashcardsData,
 } from "@/services/Games";
 import { useQuery } from "@tanstack/react-query";
-import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
 import React from "react";
 

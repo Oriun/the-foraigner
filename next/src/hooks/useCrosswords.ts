@@ -245,6 +245,7 @@ export default function useCrosswords() {
       horizontal: cursor.horizontal,
       indice: index + 1,
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cursor]);
 
   useEffect(() => {
