@@ -13,6 +13,11 @@ import reglage from './../../../assets/accueil/image 4.png'
 
 
 const Lessons = () => {
+
+  const acollade = "<"
+
+  const testarray = ['1' , '2' , '1' , '2' , '1' , '2' , '1' , '2']
+
   const router = useRouter();
   return (
     <div>
@@ -27,7 +32,7 @@ const Lessons = () => {
             <Image src={reglage} alt="reglage"></Image>
           </div>
         </Link>
-        <Link href="/app/settings">Parametres</Link>
+        <Link href="/app/settings">Reglages</Link>
       </div>
 
 
@@ -49,19 +54,40 @@ const Lessons = () => {
         </div>
       </div>
 
-      <a onClick={() => router.back()}>  Retour</a>
+      <a className={styles.retour} onClick={() => router.back()}> {acollade} Retour</a>
 
 
-      <ul>
-        <li>
-          <Link href="/app/lessons/conjugaison/7o3HF5nEoaHx29yCQrux1/past-simple-1">
-            Past Simple 1
-          </Link>
-        </li>
-        <li>...</li>
-        <li>
-        </li>
-      </ul>
+
+      {/* Card */}
+
+      <div className={styles.cardColums}>
+      {
+        testarray.map(item =>
+        (
+          <div className={styles.card}>
+            <div className={styles.titlecard}>
+              <p className={styles.uppercase}>Lecon N°1</p>
+              <p className={styles.bold}>Les couleurs</p>
+              <div className={styles.cardtraithaut}></div>
+            </div>
+            <div>
+              <p className={styles.uppercase}>Complété à <b>60 %</b></p>
+            </div>
+            <div>
+              <div className={styles.cardtraitbas}></div>
+              <p className={styles.uppercase}>mini-jeux associés</p>
+              <ul>
+                <li className={styles.bold}>Mot-fléchés n°3</li>
+                <li className={styles.bold}>Texte à trou n°1</li>
+                <li className={styles.bold}>Flashcard n°1 & 2</li>
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+      </div>
+      
+
     </div>
   );
 };

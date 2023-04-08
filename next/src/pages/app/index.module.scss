@@ -2,8 +2,10 @@
 
 .list
 {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    z-index: 0;
+    position: relative;
 }
 
 .list li
@@ -18,6 +20,8 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    z-index: 100;
+    position: relative;
 }
 
 .centerImage img
@@ -68,27 +72,44 @@
 {
     text-decoration: none;
     text-transform: uppercase;
+    font-size: 12px;
+}
 
+.setting img
+{
+    width: 60px;
+    height: auto;
 }
 
 
 .trianglebottomleft {
 	width: 0;
 	height: 0;
-	border-bottom: 250px solid #f4d1ae;
-	border-right: 250px solid transparent;
+	border-bottom: 400px solid #f4d1ae;
+	border-right: 400px solid transparent;
     position: fixed;
     left: 0;
     bottom: 0;
+    z-index: 0;
+
 }
 
  
 .triangletopright {
 	width: 0;
 	height: 0;
-	border-top: 250px solid #f4d1ae;
-	border-left: 250px solid transparent;
+	border-top: 400px solid #f4d1ae;
+	border-left: 400px solid transparent;
     position: fixed;
     right: 0;
-    top:0
+    top:0;
+    z-index: 0;
+
 }
+
+@media only screen and (max-width: 850px) {
+    .list
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
