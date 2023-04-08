@@ -75,15 +75,18 @@ export default function useCrosswords() {
     }
   }
   function setData(data: CrosswordsData) {
+    console.log("setData", data);
     const {
-      content: { words, size: dsize }
+      content: { words, size: dsize },
     } = data;
+    console.log("setData", words, dsize);
+
     const startsMap = new Map();
     const definitions = [];
     const dtiles = matrix(dsize, () => ({
       blocked: true,
       content: "",
-      start: []
+      start: [],
     }));
     for (let i = 0; i < words.length; i++) {
       const { start, description, content, horizontal } = words[i];
@@ -128,7 +131,7 @@ export default function useCrosswords() {
         {
           x: x + (horizontal ? 1 : 0),
           y: y + (horizontal ? 0 : 1),
-          horizontal
+          horizontal,
         },
         next
       );
@@ -203,7 +206,7 @@ export default function useCrosswords() {
     const word = apiData!.content.words[indice - 1];
     setCursor({
       ...word.start,
-      horizontal: word.horizontal
+      horizontal: word.horizontal,
     });
   }
 
@@ -240,7 +243,7 @@ export default function useCrosswords() {
       word: word.content,
       wordStart: wordStart,
       horizontal: cursor.horizontal,
-      indice: index + 1
+      indice: index + 1,
     });
   }, [cursor]);
 
@@ -266,6 +269,6 @@ export default function useCrosswords() {
     current,
     erase,
     isCurrent,
-    jump
+    jump,
   };
 }

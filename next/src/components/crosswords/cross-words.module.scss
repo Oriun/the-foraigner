@@ -1,0 +1,50 @@
+.crosswords {
+  padding: 80px;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--isabelline);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  gap: calc(var(--column) + var(--col-gutter));
+}
+.crosswords_grid {
+  display: grid;
+  // aspect-ratio: 1;
+  height: 100%;
+  gap: 0;
+  place-items: stretch;
+  place-content: stretch;
+  max-height: calc(50vw - 80px);
+}
+
+.crosswords_details {
+  max-width: calc(4 * var(--column) + 3 * var(--col-gutter));
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    margin-bottom: 56px;
+  }
+
+  p {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.crosswords_bg {
+  position: absolute;
+  bottom: -140px;
+  right: -360px;
+  width: 862.5px;
+  height: 920px;
+
+  filter: blur(2px);
+  transform: rotate(30.49deg);
+}

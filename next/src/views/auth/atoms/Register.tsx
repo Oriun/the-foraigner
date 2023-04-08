@@ -8,7 +8,6 @@ import Form from "./from/Form";
 const Register: React.FC<{ switchMode: () => void }> = ({ switchMode }) => {
   const router = useRouter();
   const submit = async (email: string, password: string) => {
-    console.log("register", { email, password });
     try {
       //await register(email, password);
       router.push("/auth/verification");

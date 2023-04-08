@@ -10,7 +10,7 @@ export default Auth;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-      destination: "/auth/register",
+      destination: "/auth/login",
       permanent: false,
     },
   };

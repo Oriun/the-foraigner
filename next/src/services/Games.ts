@@ -17,6 +17,16 @@ export type CrosswordsData = Exercise<{
     content: string;
     description: string;
     start: Coordinates;
-    horizontal: false;
+    horizontal: boolean;
   }[];
 }>;
+
+export type FillInTheGapsData = Exercise<string[][]>;
+
+export type FlashcardsData = Exercise<
+  {
+    image: string;
+    options: string[];
+    answer: number;
+  }[]
+>;

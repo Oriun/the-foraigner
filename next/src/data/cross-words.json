@@ -2,7 +2,7 @@
     {
         "id": "clg87xfkm00000s2h329d1596",
         "name": "Crossword Puzzle 1",
-        "type": "crossword",
+        "type": "cross-words",
         "category": "English",
         "content": {
             "size": {
@@ -54,7 +54,7 @@
     {
         "id": "clg87xke500000s2hev0nhsy7",
         "name": "Crossword Puzzle 2",
-        "type": "crossword",
+        "type": "cross-words",
         "category": "English",
         "content": {
             "size": {

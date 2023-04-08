@@ -1,0 +1,992 @@
+[
+    {
+        "id": "clg8fkn420000824rfr4ucv7x",
+        "name": "Animals",
+        "type": "flash-cards",
+        "category": "vocabulary",
+        "content": [
+            {
+                "image": "/pictures/animals/cat-clg8firhy0001252h402oem13.jpeg",
+                "answer": 0,
+                "options": [
+                    "cat",
+                    "dog",
+                    "rabbit",
+                    "elephant"
+                ]
+            },
+            {
+                "image": "/pictures/animals/giraffe-clg8fiv4s0004252h1zr94c62.jpeg",
+                "answer": 1,
+                "options": [
+                    "elephant",
+                    "giraffe",
+                    "lion",
+                    "cat"
+                ]
+            },
+            {
+                "image": "/pictures/animals/zebra-clg8fiset0002252h6nmv6zw0.jpeg",
+                "answer": 0,
+                "options": [
+                    "zebra",
+                    "rhinoceros",
+                    "hippopotamus",
+                    "cat"
+                ]
+            },
+            {
+                "image": "/pictures/animals/crocodile-clg8fiwad0005252hep39fz5o.jpeg",
+                "answer": 1,
+                "options": [
+                    "turtle",
+                    "crocodile",
+                    "snake",
+                    "cat"
+                ]
+            },
+            {
+                "image": "/pictures/animals/wombat-clg8fitwy0003252hcxvu01nd.jpeg",
+                "answer": 2,
+                "options": [
+                    "koala",
+                    "kangaroo",
+                    "wombat",
+                    "cat"
+                ]
+            },
+            {
+                "image": "/pictures/animals/penguin-clg8fixm50006252hgljd5itn.jpeg",
+                "answer": 0,
+                "options": [
+                    "penguin",
+                    "polar bear",
+                    "seal",
+                    "cat"
+                ]
+            },
+            {
+                "image": "/pictures/animals/gorilla-clg8fj2q3000a252h6nnj8a6w.jpeg",
+                "answer": 1,
+                "options": [
+                    "monkey",
+                    "gorilla",
+                    "orangutan",
+                    "cat"
+                ]
+            },
+            {
+                "image": "/pictures/animals/flamingo-clg8fj08k0008252h0vy675bf.jpeg",
+                "answer": 0,
+                "options": [
+                    "flamingo",
+                    "peacock",
+                    "swan",
+                    "cat"
+                ]
+            },
+            {
+                "image": "/pictures/animals/jellyfish-clg8fiz3k0007252h0m92api0.jpeg",
+                "answer": 1,
+                "options": [
+                    "octopus",
+                    "jellyfish",
+                    "starfish",
+                    "cat"
+                ]
+            },
+            {
+                "image": "/pictures/animals/ladybug-clg8fj1de0009252h3bt54ceh.jpeg",
+                "answer": 2,
+                "options": [
+                    "bee",
+                    "butterfly",
+                    "ladybug",
+                    "cat"
+                ]
+            }
+        ],
+        "description": "Will you be able to recognize all the different animals ?",
+        "language": "en"
+    },
+    {
+        "id": "clg8fkn440001824rc5ajh5ms",
+        "name": "Colors",
+        "type": "flash-cards",
+        "category": "vocabulary",
+        "content": [
+            {
+                "image": "/pictures/colors/red-clg8fj4tj000c252hbdod1jly.jpeg",
+                "answer": 0,
+                "options": [
+                    "red",
+                    "blue",
+                    "yellow",
+                    "green"
+                ]
+            },
+            {
+                "image": "/pictures/colors/purple-clg8fj76q000e252hb0wu6dqu.jpeg",
+                "answer": 1,
+                "options": [
+                    "green",
+                    "purple",
+                    "orange",
+                    "red"
+                ]
+            },
+            {
+                "image": "/pictures/colors/pink-clg8fj8ix000f252h1p2f077j.jpeg",
+                "answer": 0,
+                "options": [
+                    "pink",
+                    "brown",
+                    "gray",
+                    "red"
+                ]
+            },
+            {
+                "image": "/pictures/colors/white-clg8fj5y0000d252h6jdihvow.jpeg",
+                "answer": 1,
+                "options": [
+                    "black",
+                    "white",
+                    "beige",
+                    "red"
+                ]
+            },
+            {
+                "image": "/pictures/colors/turquoise-clg8fj9cl000g252hady58mbp.jpeg",
+                "answer": 0,
+                "options": [
+                    "turquoise",
+                    "lavender",
+                    "magenta",
+                    "red"
+                ]
+            },
+            {
+                "image": "/pictures/colors/navy-clg8fjat3000h252h32dmea1f.jpeg",
+                "answer": 1,
+                "options": [
+                    "teal",
+                    "navy",
+                    "maroon",
+                    "red"
+                ]
+            },
+            {
+                "image": "/pictures/colors/rust-clg8fjecq000k252hf8locva6.jpeg",
+                "answer": 2,
+                "options": [
+                    "olive",
+                    "mustard",
+                    "rust",
+                    "red"
+                ]
+            },
+            {
+                "image": "/pictures/colors/coral-clg8fjd0q000j252h5b2l2ew4.jpeg",
+                "answer": 0,
+                "options": [
+                    "coral",
+                    "peach",
+                    "salmon",
+                    "red"
+                ]
+            },
+            {
+                "image": "/pictures/colors/silver-clg8fjc16000i252hehpicxf1.jpeg",
+                "answer": 1,
+                "options": [
+                    "gold",
+                    "silver",
+                    "bronze",
+                    "red"
+                ]
+            },
+            {
+                "image": "/pictures/colors/amethyst-clg8fjf7h000l252h7c1p30np.jpeg",
+                "answer": 2,
+                "options": [
+                    "indigo",
+                    "violet",
+                    "amethyst",
+                    "red"
+                ]
+            }
+        ],
+        "description": "Will you be able to recognize all the different colors ?",
+        "language": "en"
+    },
+    {
+        "id": "clg8fkn440002824rcv0p7kjn",
+        "name": "Fruits",
+        "type": "flash-cards",
+        "category": "vocabulary",
+        "content": [
+            {
+                "image": "/pictures/fruits/apple-clg8fjgwt000n252hag80au7x.jpeg",
+                "answer": 0,
+                "options": [
+                    "apple",
+                    "banana",
+                    "orange",
+                    "grape"
+                ]
+            },
+            {
+                "image": "/pictures/fruits/watermelon-clg8fjnel000t252h2cml3kd8.jpeg",
+                "answer": 1,
+                "options": [
+                    "grape",
+                    "watermelon",
+                    "pineapple",
+                    "apple"
+                ]
+            },
+            {
+                "image": "/pictures/fruits/mango-clg8fjiqp000p252h740a4zhe.png",
+                "answer": 2,
+                "options": [
+                    "pear",
+                    "kiwi",
+                    "mango",
+                    "apple"
+                ]
+            },
+            {
+                "image": "/pictures/fruits/cherry-clg8fjkso000r252hc8rt6dre.jpeg",
+                "answer": 1,
+                "options": [
+                    "strawberry",
+                    "cherry",
+                    "blueberry",
+                    "apple"
+                ]
+            },
+            {
+                "image": "/pictures/fruits/lemon-clg8fjhsb000o252hg2xb0nke.jpeg",
+                "answer": 0,
+                "options": [
+                    "lemon",
+                    "lime",
+                    "grapefruit",
+                    "apple"
+                ]
+            },
+            {
+                "image": "/pictures/fruits/peach-clg8fjm6k000s252h08uef8jo.png",
+                "answer": 2,
+                "options": [
+                    "apricot",
+                    "plum",
+                    "peach",
+                    "apple"
+                ]
+            },
+            {
+                "image": "/pictures/fruits/pomegranate-clg8fjqxt000w252hahjya2p9.jpeg",
+                "answer": 0,
+                "options": [
+                    "pomegranate",
+                    "fig",
+                    "persimmon",
+                    "apple"
+                ]
+            },
+            {
+                "image": "/pictures/fruits/raspberry-clg8fjjr4000q252hhe77cfqd.jpeg",
+                "answer": 1,
+                "options": [
+                    "blackberry",
+                    "raspberry",
+                    "currant",
+                    "apple"
+                ]
+            },
+            {
+                "image": "/pictures/fruits/melon-clg8fjono000u252h7t286mn8.jpeg",
+                "answer": 0,
+                "options": [
+                    "melon",
+                    "cantaloupe",
+                    "honeydew",
+                    "apple"
+                ]
+            },
+            {
+                "image": "/pictures/fruits/starfruit-clg8fjpiu000v252h0fh665s7.jpeg",
+                "answer": 1,
+                "options": [
+                    "dragonfruit",
+                    "starfruit",
+                    "kiwano",
+                    "apple"
+                ]
+            }
+        ],
+        "description": "Will you be able to recognize all the different fruits ?",
+        "language": "en"
+    },
+    {
+        "id": "clg8fkn450003824r49j0gxhk",
+        "name": "Furniture",
+        "type": "flash-cards",
+        "category": "vocabulary",
+        "content": [
+            {
+                "image": "/pictures/furniture/chair-clg8fjsw5000y252hfqn18fed.png",
+                "answer": 0,
+                "options": [
+                    "chair",
+                    "sofa",
+                    "ottoman",
+                    "bed"
+                ]
+            },
+            {
+                "image": "/pictures/furniture/bunk bed-clg8fjvwp0011252h428fcyfl.jpeg",
+                "answer": 1,
+                "options": [
+                    "bed",
+                    "bunk bed",
+                    "mattress",
+                    "chair"
+                ]
+            },
+            {
+                "image": "/pictures/furniture/table-clg8fjtsy000z252hcd2pbhfd.jpeg",
+                "answer": 0,
+                "options": [
+                    "table",
+                    "desk",
+                    "nightstand",
+                    "chair"
+                ]
+            },
+            {
+                "image": "/pictures/furniture/dresser-clg8fk2ue0016252h682q05zw.png",
+                "answer": 2,
+                "options": [
+                    "cabinet",
+                    "wardrobe",
+                    "dresser",
+                    "chair"
+                ]
+            },
+            {
+                "image": "/pictures/furniture/bookshelf-clg8fk09c0014252h6hn02w55.jpeg",
+                "answer": 0,
+                "options": [
+                    "bookshelf",
+                    "shelf",
+                    "cubby",
+                    "chair"
+                ]
+            },
+            {
+                "image": "/pictures/furniture/vanity-clg8fk4250017252hf0pl39ne.jpeg",
+                "answer": 1,
+                "options": [
+                    "mirror",
+                    "vanity",
+                    "makeup table",
+                    "chair"
+                ]
+            },
+            {
+                "image": "/pictures/furniture/lamp-clg8fjxns0012252hb68kfvxz.jpeg",
+                "answer": 0,
+                "options": [
+                    "lamp",
+                    "chandelier",
+                    "ceiling light",
+                    "chair"
+                ]
+            },
+            {
+                "image": "/pictures/furniture/carpet-clg8fjuw60010252h95zt2kpy.jpeg",
+                "answer": 1,
+                "options": [
+                    "rug",
+                    "carpet",
+                    "floor mat",
+                    "chair"
+                ]
+            },
+            {
+                "image": "/pictures/furniture/bean bag-clg8fjyrn0013252h87hv5um6.png",
+                "answer": 0,
+                "options": [
+                    "bean bag",
+                    "chaise lounge",
+                    "futon",
+                    "chair"
+                ]
+            },
+            {
+                "image": "/pictures/furniture/fireplace-clg8fk1c80015252h1jwqh6cr.jpeg",
+                "answer": 0,
+                "options": [
+                    "fireplace",
+                    "heater",
+                    "air conditioner",
+                    "chair"
+                ]
+            }
+        ],
+        "description": "Will you be able to recognize all the different furniture ?",
+        "language": "en"
+    },
+    {
+        "id": "clg8fkn460004824r1sz7ea84",
+        "name": "Jobs",
+        "type": "flash-cards",
+        "category": "vocabulary",
+        "content": [
+            {
+                "image": "/pictures/jobs/doctor-clg8fk5kp0019252hgmwb42y5.jpeg",
+                "answer": 0,
+                "options": [
+                    "doctor",
+                    "nurse",
+                    "surgeon",
+                    "teacher"
+                ]
+            },
+            {
+                "image": "/pictures/jobs/professor-clg8fkqmn0005824r0824e5jp.jpeg",
+                "answer": 1,
+                "options": [
+                    "teacher",
+                    "professor",
+                    "instructor",
+                    "doctor"
+                ]
+            },
+            {
+                "image": "/pictures/jobs/engineer-clg8fk909001c252he3a7fcfj.jpeg",
+                "answer": 0,
+                "options": [
+                    "engineer",
+                    "architect",
+                    "contractor",
+                    "doctor"
+                ]
+            },
+            {
+                "image": "/pictures/jobs/judge-clg8fkrlq0006824r61j7fyt2.jpeg",
+                "answer": 1,
+                "options": [
+                    "lawyer",
+                    "judge",
+                    "paralegal",
+                    "doctor"
+                ]
+            },
+            {
+                "image": "/pictures/jobs/chef-clg8fk7lh001b252h42irhy8d.jpeg",
+                "answer": 0,
+                "options": [
+                    "chef",
+                    "cook",
+                    "pastry chef",
+                    "doctor"
+                ]
+            },
+            {
+                "image": "/pictures/jobs/electrician-clg8fkt2k0007824rc3lr66ik.jpeg",
+                "answer": 2,
+                "options": [
+                    "mechanic",
+                    "technician",
+                    "electrician",
+                    "doctor"
+                ]
+            },
+            {
+                "image": "/pictures/jobs/pilot-clg8fk6el001a252h9cbn3xll.jpeg",
+                "answer": 0,
+                "options": [
+                    "pilot",
+                    "flight attendant",
+                    "air traffic controller",
+                    "doctor"
+                ]
+            },
+            {
+                "image": "/pictures/jobs/detective-clg8fkvxb0009824rcghqc26l.png",
+                "answer": 1,
+                "options": [
+                    "police officer",
+                    "detective",
+                    "sheriff",
+                    "doctor"
+                ]
+            },
+            {
+                "image": "/pictures/jobs/firefighter-clg8fkukp0008824rhvvvg6ee.png",
+                "answer": 0,
+                "options": [
+                    "firefighter",
+                    "paramedic",
+                    "emergency medical technician",
+                    "doctor"
+                ]
+            },
+            {
+                "image": "/pictures/jobs/painter-clg8fkxnf000a824r1sh5fo6t.jpeg",
+                "answer": 1,
+                "options": [
+                    "artist",
+                    "painter",
+                    "sculptor",
+                    "doctor"
+                ]
+            }
+        ],
+        "description": "Will you be able to recognize all the different jobs ?",
+        "language": "en"
+    },
+    {
+        "id": "clg8fkxnh000b824r1lgb2ggw",
+        "name": "Musical Instruments",
+        "type": "flash-cards",
+        "category": "vocabulary",
+        "content": [
+            {
+                "image": "/pictures/musical-instruments/guitar-clg8fl050000c824r5lk87tic.png",
+                "answer": 0,
+                "options": [
+                    "guitar",
+                    "bass",
+                    "ukulele",
+                    "violin"
+                ]
+            },
+            {
+                "image": "/pictures/musical-instruments/cello-clg8fl1xc000d824rf644h6c6.png",
+                "answer": 1,
+                "options": [
+                    "violin",
+                    "cello",
+                    "double bass",
+                    "guitar"
+                ]
+            },
+            {
+                "image": "/pictures/musical-instruments/piano-clg8fl3d1000e824rdx0idrdh.jpeg",
+                "answer": 0,
+                "options": [
+                    "piano",
+                    "keyboard",
+                    "organ",
+                    "guitar"
+                ]
+            },
+            {
+                "image": "/pictures/musical-instruments/saxophone-clg8fl4l0000f824r6vmcbtkf.png",
+                "answer": 2,
+                "options": [
+                    "trumpet",
+                    "trombone",
+                    "saxophone",
+                    "guitar"
+                ]
+            },
+            {
+                "image": "/pictures/musical-instruments/drums-clg8fl5y3000g824rhflego2s.png",
+                "answer": 0,
+                "options": [
+                    "drums",
+                    "percussion",
+                    "cymbals",
+                    "guitar"
+                ]
+            },
+            {
+                "image": "/pictures/musical-instruments/accordion-clg8fl783000h824rfwty9u7w.jpeg",
+                "answer": 1,
+                "options": [
+                    "harmonica",
+                    "accordion",
+                    "melodica",
+                    "guitar"
+                ]
+            },
+            {
+                "image": "/pictures/musical-instruments/flute-clg8fl8ni000i824ra25o35sw.png",
+                "answer": 0,
+                "options": [
+                    "flute",
+                    "clarinet",
+                    "piccolo",
+                    "guitar"
+                ]
+            },
+            {
+                "image": "/pictures/musical-instruments/harp-clg8fla3o000j824r8841ew34.png",
+                "answer": 0,
+                "options": [
+                    "harp",
+                    "viola",
+                    "mandolin",
+                    "guitar"
+                ]
+            },
+            {
+                "image": "/pictures/musical-instruments/vibraphone-clg8flbp7000k824r9qyt9nbv.jpeg",
+                "answer": 2,
+                "options": [
+                    "xylophone",
+                    "marimba",
+                    "vibraphone",
+                    "guitar"
+                ]
+            },
+            {
+                "image": "/pictures/musical-instruments/didgeridoo-clg8flcwm000l824r1n7w2s8q.png",
+                "answer": 1,
+                "options": [
+                    "bagpipes",
+                    "didgeridoo",
+                    "pan flute",
+                    "guitar"
+                ]
+            }
+        ],
+        "description": "Will you be able to recognize all the different musical instruments ?",
+        "language": "en"
+    },
+    {
+        "id": "clg8flcwo000m824rakm3c8lr",
+        "name": "Sports",
+        "type": "flash-cards",
+        "category": "vocabulary",
+        "content": [
+            {
+                "image": "/pictures/sports/soccer-clg8flfka000n824r0omg8jwd.png",
+                "answer": 0,
+                "options": [
+                    "soccer",
+                    "football",
+                    "basketball",
+                    "tennis"
+                ]
+            },
+            {
+                "image": "/pictures/sports/badminton-clg8flsrc000w824r0d5fa3oh.png",
+                "answer": 1,
+                "options": [
+                    "tennis",
+                    "badminton",
+                    "ping pong",
+                    "soccer"
+                ]
+            },
+            {
+                "image": "/pictures/sports/golf-clg8flgv1000o824r8bj7ch97.png",
+                "answer": 0,
+                "options": [
+                    "golf",
+                    "disc golf",
+                    "mini golf",
+                    "soccer"
+                ]
+            },
+            {
+                "image": "/pictures/sports/diving-clg8flilq000p824r9hr406ne.jpeg",
+                "answer": 1,
+                "options": [
+                    "swimming",
+                    "diving",
+                    "water polo",
+                    "soccer"
+                ]
+            },
+            {
+                "image": "/pictures/sports/surfing-clg8flk21000q824rawqi0alq.jpeg",
+                "answer": 0,
+                "options": [
+                    "surfing",
+                    "skateboarding",
+                    "snowboarding",
+                    "soccer"
+                ]
+            },
+            {
+                "image": "/pictures/sports/mixed martial arts-clg8flln5000r824ra0a11mhl.jpeg",
+                "answer": 2,
+                "options": [
+                    "boxing",
+                    "wrestling",
+                    "mixed martial arts",
+                    "soccer"
+                ]
+            },
+            {
+                "image": "/pictures/sports/running-clg8flmuz000s824rd8o00lai.jpeg",
+                "answer": 0,
+                "options": [
+                    "running",
+                    "marathon",
+                    "sprint",
+                    "soccer"
+                ]
+            },
+            {
+                "image": "/pictures/sports/mountain biking-clg8flo87000t824r5yx7emta.jpeg",
+                "answer": 1,
+                "options": [
+                    "cycling",
+                    "mountain biking",
+                    "bmx",
+                    "soccer"
+                ]
+            },
+            {
+                "image": "/pictures/sports/climbing-clg8flpa3000u824r04sl09h6.jpeg",
+                "answer": 0,
+                "options": [
+                    "climbing",
+                    "bouldering",
+                    "canyoning",
+                    "soccer"
+                ]
+            },
+            {
+                "image": "/pictures/sports/pilates-clg8flqv1000v824rhwrvd9eo.png",
+                "answer": 1,
+                "options": [
+                    "yoga",
+                    "pilates",
+                    "barre",
+                    "soccer"
+                ]
+            }
+        ],
+        "description": "Will you be able to recognize all the different sports ?",
+        "language": "en"
+    },
+    {
+        "id": "clg8flsrd000x824rcoph0bg6",
+        "name": "Vegetables",
+        "type": "flash-cards",
+        "category": "vocabulary",
+        "content": [
+            {
+                "image": "/pictures/vegetables/carrot-clg8fluta000y824ra3hi4rx8.png",
+                "answer": 0,
+                "options": [
+                    "carrot",
+                    "broccoli",
+                    "cauliflower",
+                    "tomato"
+                ]
+            },
+            {
+                "image": "/pictures/vegetables/cucumber-clg8flwea000z824rgnecaqk8.jpeg",
+                "answer": 1,
+                "options": [
+                    "tomato",
+                    "cucumber",
+                    "zucchini",
+                    "carrot"
+                ]
+            },
+            {
+                "image": "/pictures/vegetables/lettuce-clg8flxnt0010824r15guhcrs.jpeg",
+                "answer": 2,
+                "options": [
+                    "spinach",
+                    "kale",
+                    "lettuce",
+                    "carrot"
+                ]
+            },
+            {
+                "image": "/pictures/vegetables/potato-clg8flz1b0011824r7way1vbz.jpeg",
+                "answer": 0,
+                "options": [
+                    "potato",
+                    "sweet potato",
+                    "yam",
+                    "carrot"
+                ]
+            },
+            {
+                "image": "/pictures/vegetables/peas-clg8fm0s40012824rc09gct87.jpeg",
+                "answer": 1,
+                "options": [
+                    "corn",
+                    "peas",
+                    "green beans",
+                    "carrot"
+                ]
+            },
+            {
+                "image": "/pictures/vegetables/bell pepper-clg8fm3se0014824r4b46cpwn.png",
+                "answer": 0,
+                "options": [
+                    "bell pepper",
+                    "chili pepper",
+                    "jalapeno",
+                    "carrot"
+                ]
+            },
+            {
+                "image": "/pictures/vegetables/shallot-clg8fm24d0013824rgslrf0yv.png",
+                "answer": 2,
+                "options": [
+                    "onion",
+                    "garlic",
+                    "shallot",
+                    "carrot"
+                ]
+            },
+            {
+                "image": "/pictures/vegetables/asparagus-clg8fm52g0015824rc0jqc4zs.jpeg",
+                "answer": 0,
+                "options": [
+                    "asparagus",
+                    "artichoke",
+                    "celery",
+                    "carrot"
+                ]
+            },
+            {
+                "image": "/pictures/vegetables/radish-clg8fm6w70016824r0xh8h1ei.jpeg",
+                "answer": 1,
+                "options": [
+                    "beet",
+                    "radish",
+                    "turnip",
+                    "carrot"
+                ]
+            },
+            {
+                "image": "/pictures/vegetables/mushroom-clg8fm8q10017824r6n9ja2aq.jpeg",
+                "answer": 0,
+                "options": [
+                    "mushroom",
+                    "eggplant",
+                    "okra",
+                    "carrot"
+                ]
+            }
+        ],
+        "description": "Will you be able to recognize all the different vegetables ?",
+        "language": "en"
+    },
+    {
+        "id": "clg8fm8q20018824r10i6944n",
+        "name": "Weather",
+        "type": "flash-cards",
+        "category": "vocabulary",
+        "content": [
+            {
+                "image": "/pictures/weather/sunny-clg8fmb480019824r1gdc5bmj.png",
+                "answer": 0,
+                "options": [
+                    "sunny",
+                    "cloudy",
+                    "rainy",
+                    "foggy"
+                ]
+            },
+            {
+                "image": "/pictures/weather/windy-clg8fmh8w001d824rhhwr1xld.png",
+                "answer": 1,
+                "options": [
+                    "foggy",
+                    "windy",
+                    "stormy",
+                    "sunny"
+                ]
+            },
+            {
+                "image": "/pictures/weather/snowy-clg8fmctw001a824r4xv4h4ia.jpeg",
+                "answer": 0,
+                "options": [
+                    "snowy",
+                    "icy",
+                    "hail",
+                    "sunny"
+                ]
+            },
+            {
+                "image": "/pictures/weather/thunderstorm-clg8fmj4x001e824r9pdw79be.jpeg",
+                "answer": 0,
+                "options": [
+                    "thunderstorm",
+                    "lightning",
+                    "tornado",
+                    "sunny"
+                ]
+            },
+            {
+                "image": "/pictures/weather/clear-clg8fmehl001b824r33isgfvx.jpeg",
+                "answer": 0,
+                "options": [
+                    "clear",
+                    "cool",
+                    "chilly",
+                    "sunny"
+                ]
+            },
+            {
+                "image": "/pictures/weather/hot-clg8fmfwc001c824rgdvs4hun.jpeg",
+                "answer": 0,
+                "options": [
+                    "hot",
+                    "humid",
+                    "muggy",
+                    "sunny"
+                ]
+            },
+            {
+                "image": "/pictures/weather/heatwave-clg8fmkmq001f824r9ypvb8bm.png",
+                "answer": 1,
+                "options": [
+                    "drought",
+                    "heatwave",
+                    "wildfire",
+                    "sunny"
+                ]
+            },
+            {
+                "image": "/pictures/weather/blizzard-clg8fmpn5001i824r6xw32tb2.jpeg",
+                "answer": 2,
+                "options": [
+                    "frost",
+                    "freeze",
+                    "blizzard",
+                    "sunny"
+                ]
+            },
+            {
+                "image": "/pictures/weather/downpour-clg8fmnyz001h824r1qni18jz.jpeg",
+                "answer": 1,
+                "options": [
+                    "drizzle",
+                    "downpour",
+                    "monsoon",
+                    "sunny"
+                ]
+            },
+            {
+                "image": "/pictures/weather/rainbow-clg8fmmb4001g824r6f9x0pjh.png",
+                "answer": 0,
+                "options": [
+                    "rainbow",
+                    "hurricane",
+                    "typhoon",
+                    "sunny"
+                ]
+            }
+        ],
+        "description": "Will you be able to recognize all the different weather ?",
+        "language": "en"
+    }
+]

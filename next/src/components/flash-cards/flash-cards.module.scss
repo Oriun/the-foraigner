@@ -1,0 +1,171 @@
+.bandeau
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.triangleD {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 920px;
+    border-color: transparent transparent #f4d1ae transparent;
+    transform: rotate(45deg);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-left: 40%;
+    margin-bottom: 50%;
+    z-index: -100;
+  }
+
+
+  
+.triangleG {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 920px;
+    border-color: transparent transparent #f4d1ae transparent;
+    transform: rotate(-135deg);
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-right: 40%;
+    margin-top: 50%;
+    z-index: -100;
+  }
+
+  .logoTop
+  {
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+
+  .title
+  {
+    text-align: center;
+  }
+
+  .title p
+  {
+    color: #12263A;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .hautDroite
+  {
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    margin: 2% 2% 0 0;
+  }
+
+  .titleContain
+  {
+    display: flex;
+  }
+
+  .texte
+  {
+    width: 45%;
+    margin-left: 5%;
+  }
+
+  .texte1
+  {
+    margin-top: 6%;
+    font-size: large;
+  }
+
+  .buttonCustom
+  {
+    background-color: #12263a;
+    color: white;
+    border-radius: 30px;
+    padding: 5px;
+    height: 44px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    width: 65px;
+  }
+
+  .buttonInt
+  {
+    width: 50px;
+    height: 50px;
+    margin-left: 8%;
+    margin-top: 7%;
+  }
+
+  .imgGame
+  {
+    width: 70%;
+    height: auto;
+    margin-top: 4%;
+    margin-left: 17%;
+    position: relative;
+  }
+
+  .buttonChoose
+  {
+    text-align: center;
+  }
+
+  .buttonChoose button
+  {
+    width: 70%;
+    background-color: #06BCC1;
+    padding: 3%;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 6px;
+    margin: 7px 0px;
+    border: none;
+    box-shadow: 0px 0px 2px black;
+    max-width: 525px;
+  }
+
+.validate
+{
+    text-align: center
+}
+
+  .validate button
+  {
+    width: 65%;
+    background-color: #12263A;
+    padding: 3%;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 15px;
+    margin: 7px 0px;
+    max-width: 450px;
+    cursor: pointer;
+  }
+
+.game
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+// .divImg
+// {
+//   width: 60%;
+// }
+
+.divButton
+{
+  width: 60%;
+}
+
+.exemple
+{
+  margin-top: 5%;
+}

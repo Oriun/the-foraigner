@@ -1,10 +1,12 @@
 import Crosswords from "@/data/cross-words.json";
 import FillInTheGaps from "@/data/fill-in-the-gaps.json";
+import FlashCard from "@/data/flash-cards.json";
 import { Exercise } from "@/services/Games";
 
 const games: Record<string, any> = {
   "fill-in-the-gaps": FillInTheGaps,
   "cross-words": Crosswords,
+  "flash-cards": FlashCard,
 };
 export async function GET(
   _request: Request,

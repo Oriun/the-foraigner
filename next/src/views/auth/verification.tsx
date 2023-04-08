@@ -34,7 +34,6 @@ function Second() {
     };
   });
   const submit = async () => {
-    console.log("Code : ", verif);
     if (verif === "admin") {
       // Call API send email
       router.push("/onboarding/notification");
