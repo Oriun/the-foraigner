@@ -1,0 +1,181 @@
+.trianglebottomleft {
+	width: 0;
+	height: 0;
+	border-bottom: 400px solid #f4d1ae;
+	border-right: 400px solid transparent;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+ 
+.triangletopright {
+	width: 0;
+	height: 0;
+	border-top: 400px solid #f4d1ae;
+	border-left: 400px solid transparent;
+    position: fixed;
+    right: 0;
+    top:0;
+    z-index: 0;
+}
+
+.imgcircle
+{
+    border-radius: 50%;
+    // width: 75%;
+    height: auto;
+    border: 3px solid #44cdd1;
+    text-align: center;
+    padding: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+	grid-row: 1;
+    grid-column: 1;
+}
+
+.circle
+{
+    grid-column: 2;
+}
+
+.title
+{
+    grid-column: 3/7;
+    text-align: center;
+}
+
+.imgcircle img{
+    width: 65%;
+    height: auto;
+}
+
+.setting
+{
+    position: fixed;
+    right: 0;
+    margin: 10px 10px 0 0;
+}
+
+.setting a
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.setting img
+{
+    width: 60px;
+    height: auto;
+}
+
+.headerStyle
+{
+	display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-top: 2%;
+    z-index: 100;
+    position: relative;
+
+}
+
+.centerImage img
+{
+    width: 65%;
+    height: auto;
+}
+
+.centerImage
+{
+    text-align: center;
+}
+
+.foraigner img
+{
+    width: 40%;
+}
+
+.retour
+{
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 2%;
+}
+
+.uppercase
+{
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.card
+{
+    text-align: center;
+    margin: 3%;
+    border: 3px solid #44cdd1;
+    border-radius: 10%;
+    background-color: white;
+}
+
+// .card div
+// {
+//     border: 3px solid #44cdd1;
+// }
+
+
+
+.cardColums
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0% 5% 0% 5%;
+    z-index: 100;
+    position: relative;
+}
+
+.cardtraitbas
+{
+    border: 1.5px solid #44cdd1;
+}
+
+
+.cardtraithaut
+{
+    border: 1.5px solid #44cdd1;
+}
+
+.uppercase b{
+    margin-left: 15%;
+}
+
+.card li
+{
+    text-align: start;
+}
+
+
+@media only screen and (max-width: 870px) {
+    .cardColums
+    {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+
+  @media only screen and (max-width: 650px) {
+    .cardColums
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
