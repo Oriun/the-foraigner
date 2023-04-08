@@ -2,29 +2,40 @@ import { GetServerSideProps } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { useQuery } from "@tanstack/react-query";
+import { Exercise } from "@/services/Games";
+import slugify from "slugify";
 
 export type GamesPerCategoryProps = {
   category: string;
   games: { id: string; title: string; slug: string }[];
 };
-const GamesPerCategory: React.FC<GamesPerCategoryProps> = ({
-  category,
-  games,
-}) => {
+const GamesPerCategory: React.FC<GamesPerCategoryProps> = () => {
   const router = useRouter();
+  const { category } = router.query;
+  const games = useQuery<Exercise[]>({
+    queryKey: ["games", category],
+    queryFn: async () => {
+      const response = await fetch(`/api/games/${category}`);
+      if (!response.ok) throw new Error(response.statusText);
+      const data = await response.json();
+      return data;
+    },
+  });
+  if (games.isLoading) return <div>Loading...</div>;
+  if (games.isError) return <div>Error: {(games.error as any).message}</div>;
+
   return (
     <div>
       <h1>Toutes les {category} sont visibles ici</h1>
-      <h2>Design à faire</h2>
       <br />
       <br />
       <br />
-      <h2>Exemple de Navigation</h2>
       <ul>
-        {games.map(({ id, title, slug }) => (
+        {games.data.map(({ id, name }) => (
           <li key={id}>
-            <Link href={`/app/games/fill-in-the-gaps/${id}/${slug}`}>
-              {title}
+            <Link href={`/app/games/${category}/${id}/${slugify(name)}`}>
+              {name}
             </Link>
           </li>
         ))}
@@ -38,39 +49,3 @@ const GamesPerCategory: React.FC<GamesPerCategoryProps> = ({
 };
 
 export default GamesPerCategory;
-
-const sampleGamesByCategory: Record<
-  string,
-  { id: string; title: string; slug: string }[]
-> = {
-  "fill-in-the-gaps": [
-    {
-      id: "t3JC0yolSgH2bdTkBRTLm",
-      title: "Past Simple 1",
-      slug: "past-simple-1",
-    },
-  ],
-  "flash-cards": [
-    {
-      id: "OFLByxSY_EodeP56pRgEy",
-      title: "Everyday Objects 1",
-      slug: "everyday-objects-1",
-    },
-  ],
-  "cross-words": [
-    {
-      id: "9DkcqCWKEDjEsSKm7_z_l",
-      title: "Colors 1",
-      slug: "colors-1",
-    },
-  ],
-};
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const { category } = query;
-  return {
-    props: {
-      category,
-      games: sampleGamesByCategory[category as string] ?? [],
-    },
-  };
-};

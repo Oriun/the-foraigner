@@ -1,0 +1,664 @@
+[
+    {
+        "id": "clg87drch00000s2h2nzjarur",
+        "name": "Pas Simple 1",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "Sonia",
+                "is",
+                "(be) the most beautiful girl in my campus."
+            ],
+            [
+                "Look at the door! Tom",
+                "open",
+                "(open) it now."
+            ],
+            [
+                "I",
+                "ran",
+                "(run) as soon as they told me so."
+            ],
+            [
+                "Koffi and Mary",
+                "won",
+                "(win) National cup of Tennis two months ago."
+            ],
+            [
+                "We never",
+                "swim",
+                "(swim) in the Pacific Ocean. I",
+                "would",
+                "(will) like to go there."
+            ],
+            [
+                "Joe didn't go to Germany with USA football team. He wishes he",
+                "were",
+                "(be) their goalkeeper."
+            ],
+            [
+                "When I",
+                "played",
+                "(played) tennis last morning,I won every match"
+            ],
+            [
+                "My sister often",
+                "cooked",
+                "(cook) delicious cakes"
+            ],
+            [
+                "I",
+                "became",
+                "(become) a pilot if I was very good at Mathematics."
+            ],
+            [
+                "Anna",
+                "show",
+                "(show) me the right way to come back from school on Mondays."
+            ]
+        ]
+    },
+    {
+        "id": "clg87dtxg00000s2h9b4oarjx",
+        "name": "Pas Simple 2",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "She",
+                "bought",
+                "(buy) a new dress for the party."
+            ],
+            [
+                "The sun",
+                "rises",
+                "(rise) in the east."
+            ],
+            [
+                "They",
+                "went",
+                "(go) to the museum last weekend."
+            ],
+            [
+                "Martin",
+                "plays",
+                "(play) the guitar in a band."
+            ],
+            [
+                "Cats",
+                "sleep",
+                "(sleep) most of the day."
+            ],
+            [
+                "We",
+                "visited",
+                "(visit) the Eiffel Tower during our trip to Paris."
+            ],
+            [
+                "Lucy",
+                "reads",
+                "(read) a book before going to bed every night."
+            ],
+            [
+                "He",
+                "worked",
+                "(work) as a waiter before becoming an actor."
+            ],
+            [
+                "The children",
+                "swam",
+                "(swim) in the pool all afternoon."
+            ],
+            [
+                "Samantha",
+                "wrote",
+                "(write) a letter to her grandmother."
+            ]
+        ]
+    },
+    {
+        "id": "clg87dw5r00000s2hecbuh2sx",
+        "name": "Pas Simple 3",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "Our dog",
+                "loves",
+                "(love) chasing squirrels in the park."
+            ],
+            [
+                "She",
+                "lived",
+                "(live) in Italy for two years."
+            ],
+            [
+                "The baby",
+                "cried",
+                "(cry) all night long."
+            ],
+            [
+                "I",
+                "studied",
+                "(study) French in high school."
+            ],
+            [
+                "They",
+                "enjoy",
+                "(enjoy) going to the movies on Saturdays."
+            ],
+            [
+                "Alice",
+                "drinks",
+                "(drink) coffee every morning."
+            ],
+            [
+                "Max",
+                "forgot",
+                "(forget) his umbrella at home."
+            ],
+            [
+                "She",
+                "washed",
+                "(wash) the dishes after dinner."
+            ],
+            [
+                "He",
+                "passed",
+                "(pass) the exam with flying colors."
+            ],
+            [
+                "They",
+                "traveled",
+                "(travel) to Japan last year."
+            ]
+        ]
+    },
+    {
+        "id": "clg87dy5j00000s2h78mkdu7i",
+        "name": "Pas Simple 4",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "The cat",
+                "climbed",
+                "(climb) the tree to catch the bird."
+            ],
+            [
+                "I",
+                "watched",
+                "(watch) my favorite show last night."
+            ],
+            [
+                "John",
+                "gave",
+                "(give) Sara a gift for her birthday."
+            ],
+            [
+                "She",
+                "sang",
+                "(sing) in the choir at church."
+            ],
+            [
+                "They",
+                "planted",
+                "(plant) flowers in the garden."
+            ],
+            [
+                "Mike",
+                "lost",
+                "(loose) his wallet on the bus."
+            ],
+            [
+                "I",
+                "found",
+                "(found) a twenty-dollar bill on the sidewalk."
+            ],
+            [
+                "The teacher",
+                "explained",
+                "(explain) the lesson to the students."
+            ],
+            [
+                "He",
+                "tried",
+                "(try) to fix the broken window."
+            ],
+            [
+                "They",
+                "celebrated",
+                "(celebrate) their anniversary at a fancy restaurant."
+            ]
+        ]
+    },
+    {
+        "id": "clg87dzs900000s2h2iyu27jj",
+        "name": "Pas Simple 5",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "I",
+                "met",
+                "(meet) my best friend in college."
+            ],
+            [
+                "She",
+                "painted",
+                "(paint) a beautiful picture of a sunset."
+            ],
+            [
+                "The dog",
+                "barked",
+                "(bark) loudly at the mail carrier."
+            ],
+            [
+                "The students",
+                "finished",
+                "(finish) the project on time."
+            ],
+            [
+                "He",
+                "listened",
+                "(listen) to the music on his headphones."
+            ],
+            [
+                "We",
+                "ate",
+                "(eat) pizza for dinner last night."
+            ],
+            [
+                "She",
+                "practiced",
+                "(practice) yoga every morning."
+            ],
+            [
+                "The rain",
+                "stopped",
+                "(stop) after a few hours."
+            ],
+            [
+                "He",
+                "built",
+                "(build) a treehouse for his kids."
+            ],
+            [
+                "They",
+                "hiked",
+                "(hike) to the top of the mountain."
+            ]
+        ]
+    },
+    {
+        "id": "clg87e29400000s2h6vgbe1t4",
+        "name": "Pas Simple 6",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "Sara",
+                "wears",
+                "(wear) glasses to read."
+            ],
+            [
+                "He",
+                "cooked",
+                "(cook) spaghetti for dinner."
+            ],
+            [
+                "The birds",
+                "flew",
+                "(fly) south for the winter."
+            ],
+            [
+                "I",
+                "dreamed",
+                "(dream) about traveling the world."
+            ],
+            [
+                "They",
+                "laughed",
+                "(laugh) at the funny movie."
+            ],
+            [
+                "He",
+                "fixed",
+                "(fix) the leaky faucet in the kitchen."
+            ],
+            [
+                "The flowers",
+                "bloomed",
+                "(bloom) in the springtime."
+            ],
+            [
+                "I",
+                "joined",
+                "(join) a sports club to get fit."
+            ],
+            [
+                "They",
+                "danced",
+                "(dance) all night at the wedding."
+            ],
+            [
+                "She",
+                "baked",
+                "(baked) cookies for the school bake sale."
+            ]
+        ]
+    },
+    {
+        "id": "clg87e43100000s2hd9s37b6g",
+        "name": "Pas Simple 7",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "The train",
+                "arrived",
+                "ten minutes late."
+            ],
+            [
+                "She",
+                "cut",
+                "her finger while chopping vegetables."
+            ],
+            [
+                "They",
+                "rented",
+                "a car for their road trip."
+            ],
+            [
+                "I",
+                "mailed",
+                "the package to my friend."
+            ],
+            [
+                "The children",
+                "played",
+                "hide-and-seek in the park."
+            ],
+            [
+                "He",
+                "photographed",
+                "the beautiful scenery on his vacation."
+            ],
+            [
+                "We",
+                "walked",
+                "along the beach at sunset."
+            ],
+            [
+                "She",
+                "brushed",
+                "her hair before going to bed."
+            ],
+            [
+                "He",
+                "taught",
+                "English in a foreign country."
+            ],
+            [
+                "They",
+                "shared",
+                "a pizza for lunch."
+            ]
+        ]
+    },
+    {
+        "id": "clg87e5vn00000s2h2kqv2w2t",
+        "name": "Pas Simple 8",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "The movie",
+                "started",
+                "at 8 pm."
+            ],
+            [
+                "She",
+                "knitted",
+                "a scarf for her mother."
+            ],
+            [
+                "I",
+                "wrote",
+                "a poem for the poetry contest."
+            ],
+            [
+                "They",
+                "rowed",
+                "a boat across the lake."
+            ],
+            [
+                "He",
+                "jogged",
+                "three miles every morning."
+            ],
+            [
+                "The cat",
+                "purred",
+                "contentedly on the sofa."
+            ],
+            [
+                "I",
+                "picked",
+                "fresh strawberries from the garden."
+            ],
+            [
+                "She",
+                "sewed",
+                "a dress for the costume party."
+            ],
+            [
+                "He",
+                "raked",
+                "the leaves in the front yard."
+            ],
+            [
+                "They",
+                "skated",
+                "on the frozen pond."
+            ]
+        ]
+    },
+    {
+        "id": "clg87e7sq00000s2h1gztfdnx",
+        "name": "Pas Simple 9",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "The wind",
+                "blew",
+                "the papers off the table."
+            ],
+            [
+                "She",
+                "waved",
+                "goodbye to her friends."
+            ],
+            [
+                "The dog",
+                "dug",
+                "a hole in the backyard."
+            ],
+            [
+                "I",
+                "borrowed",
+                "a book from the library."
+            ],
+            [
+                "They",
+                "fished",
+                "at the lake all day."
+            ],
+            [
+                "He",
+                "invented",
+                "a new gadget for the kitchen."
+            ],
+            [
+                "We",
+                "painted",
+                "the living room a light blue color."
+            ],
+            [
+                "She",
+                "watered",
+                "the plants in the garden."
+            ],
+            [
+                "He",
+                "stacked",
+                "the firewood for the winter."
+            ],
+            [
+                "They",
+                "rode",
+                "bicycles through the countryside."
+            ]
+        ]
+    },
+    {
+        "id": "clg87e9en00000s2h05tibolb",
+        "name": "Pas Simple 10",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "The sun",
+                "set",
+                "behind the mountains."
+            ],
+            [
+                "She",
+                "folded",
+                "the laundry neatly."
+            ],
+            [
+                "I",
+                "tasted",
+                "the soup to check the seasoning."
+            ],
+            [
+                "They",
+                "climbed",
+                "the stairs to the top floor."
+            ],
+            [
+                "He",
+                "whistled",
+                "while he worked."
+            ],
+            [
+                "The snow",
+                "melted",
+                "quickly in the sun."
+            ],
+            [
+                "I",
+                "carved",
+                "a pumpkin for Halloween."
+            ],
+            [
+                "She",
+                "ironed",
+                "her clothes for the interview."
+            ],
+            [
+                "He",
+                "pruned",
+                "the bushes in the front yard."
+            ],
+            [
+                "They",
+                "sledded",
+                "down the snowy hill."
+            ]
+        ]
+    },
+    {
+        "id": "clg87ebyo00000s2h0yxg7c1q",
+        "name": "Pas Simple 11",
+        "type": "fill-in-the-gaps",
+        "category": "conjugation",
+        "description": "Fill in the gaps with the correct form of the verb in parentheses.",
+        "language": "en",
+        "content": [
+            [
+                "The moon",
+                "shone",
+                "brightly in the night sky."
+            ],
+            [
+                "She",
+                "tidied",
+                "her room before her guests arrived."
+            ],
+            [
+                "I",
+                "sipped",
+                "my coffee slowly, enjoying the flavor."
+            ],
+            [
+                "They",
+                "jumped",
+                "into the pool to cool off."
+            ],
+            [
+                "He",
+                "strummed",
+                "his guitar, composing a new song."
+            ],
+            [
+                "The leaves",
+                "rustled",
+                "in the gentle breeze."
+            ],
+            [
+                "I",
+                "arranged",
+                "the flowers in a vase."
+            ],
+            [
+                "She",
+                "peeled",
+                "the apples for the pie."
+            ],
+            [
+                "He",
+                "shoveled",
+                "the snow from the driveway."
+            ],
+            [
+                "They",
+                "strolled",
+                "through the park, enjoying the scenery."
+            ]
+        ]
+    }
+]

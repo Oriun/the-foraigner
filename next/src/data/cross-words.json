@@ -1,0 +1,106 @@
+[
+    {
+        "id": "clg87xfkm00000s2h329d1596",
+        "name": "Crossword Puzzle 1",
+        "type": "crossword",
+        "category": "English",
+        "content": {
+            "size": {
+                "x": 5,
+                "y": 5
+            },
+            "words": [
+                {
+                    "content": "apple",
+                    "description": "A sweet fruit with a round shape.",
+                    "start": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "horizontal": true
+                },
+                {
+                    "content": "pear",
+                    "description": "A fruit with a unique shape, narrow at the top and wider at the bottom.",
+                    "start": {
+                        "x": 0,
+                        "y": 2
+                    },
+                    "horizontal": true
+                },
+                {
+                    "content": "dog",
+                    "description": "A common domesticated animal known as man's best friend.",
+                    "start": {
+                        "x": 3,
+                        "y": 0
+                    },
+                    "horizontal": false
+                },
+                {
+                    "content": "cat",
+                    "description": "A small, furry pet known for its independence and curiosity.",
+                    "start": {
+                        "x": 4,
+                        "y": 0
+                    },
+                    "horizontal": false
+                }
+            ]
+        },
+        "description": "A beginner-level English crossword puzzle with simple words.",
+        "language": "English"
+    },
+    {
+        "id": "clg87xke500000s2hev0nhsy7",
+        "name": "Crossword Puzzle 2",
+        "type": "crossword",
+        "category": "English",
+        "content": {
+            "size": {
+                "x": 5,
+                "y": 5
+            },
+            "words": [
+                {
+                    "content": "rain",
+                    "description": "Water that falls from the sky in small drops.",
+                    "start": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "horizontal": true
+                },
+                {
+                    "content": "snow",
+                    "description": "Frozen water that falls from the sky in the form of white flakes.",
+                    "start": {
+                        "x": 0,
+                        "y": 2
+                    },
+                    "horizontal": true
+                },
+                {
+                    "content": "frog",
+                    "description": "A small, tailless amphibian with a short, squat body and long legs.",
+                    "start": {
+                        "x": 2,
+                        "y": 0
+                    },
+                    "horizontal": false
+                },
+                {
+                    "content": "boat",
+                    "description": "A small vehicle for traveling on water.",
+                    "start": {
+                        "x": 4,
+                        "y": 0
+                    },
+                    "horizontal": false
+                }
+            ]
+        },
+        "description": "A beginner-level English crossword puzzle with simple words.",
+        "language": "English"
+    }
+]
