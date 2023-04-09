@@ -19,33 +19,33 @@ test("get started link", async ({ page }) => {
   await expect(page).toHaveURL("http://localhost:3000/auth/login");
 });
 
+const base = "http://localhost:3000/app";
 test("app routing", async ({ page }) => {
   const paths = ["lessons", "exercises", "games"];
-  const base = "http://localhost:3000/app";
   await page.goto(base);
 
   for (const path of paths) {
     await test.step(path, async () => {
-      const lessons = await page.$(`a[href^='/app/${path}']`);
+      const lessons = await page.waitForSelector(`a[href^='/app/${path}']`);
 
-      await Promise.all([lessons?.click(), page.waitForURL(`${base}/${path}`)]);
+      await Promise.all([lessons.click(), page.waitForURL(`${base}/${path}`)]);
 
       await expect(page).toHaveURL(`${base}/${path}`);
 
       await page.goBack();
     });
   }
+});
 
-  await test.step("chat", async () => {
-    await page.goto(base);
+test("chat navigation", async ({ page }) => {
+  await page.goto(base);
 
-    const chat = await page.$(`a[href^='/app/chat']`);
+  const chat = await page.waitForSelector(`a[href^='/app/chat']`);
 
-    await Promise.all([
-      chat?.click(),
-      page.waitForURL(`http://chat.foraigner.com`),
-    ]);
+  await Promise.all([
+    chat?.click(),
+    page.waitForURL(`http://chat.foraigner.com`),
+  ]);
 
-    await expect(page).toHaveURL(`http://chat.foraigner.com`);
-  });
+  await expect(page).toHaveURL(`http://chat.foraigner.com`);
 });
