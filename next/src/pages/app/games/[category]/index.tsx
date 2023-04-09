@@ -10,7 +10,6 @@ import Image from "next/image";
 
 import logo from "./../../../../assets/accueil/Illustration_sans_titre 1.png"; // Tell webpack this JS file uses this image
 
-
 import styles from "./index.module.scss";
 
 export type GamesPerCategoryProps = {
@@ -26,7 +25,6 @@ const GamesPerCategory: React.FC<GamesPerCategoryProps> = () => {
       const response = await fetch(`/api/games/${category}`);
       if (!response.ok) throw new Error(response.statusText);
       const data = await response.json();
-      console.log(data)
       return data;
     },
   });
@@ -35,15 +33,13 @@ const GamesPerCategory: React.FC<GamesPerCategoryProps> = () => {
 
   return (
     <div>
-
       <div className={styles.triangletopright}></div>
       <div className={styles.trianglebottomleft}></div>
 
       <h1 className={styles.title}>Toutes les {category} sont visibles ici</h1>
 
-      
       <div className={styles.centerImage}>
-          <Image src={logo} alt="logo" />
+        <Image src={logo} alt="logo" />
       </div>
 
       <div className={styles.game}>
@@ -52,20 +48,21 @@ const GamesPerCategory: React.FC<GamesPerCategoryProps> = () => {
 
         <div className={styles.card}>
           {games.data.map(({ id, name }) => (
-            <Link href={`/app/games/${category}/${id}/${slugify(name)}`}>
+            <Link
+              href={`/app/games/${category}/${id}/${slugify(name)}`}
+              key={id}
+            >
               <div className={styles.cards} key={id}>
                 <p>{name}</p>
               </div>
             </Link>
           ))}
         </div>
-        
+
         <div className={styles.return}>
           <a onClick={() => router.back()}>Retour</a>
         </div>
-        
       </div>
-
     </div>
   );
 };
