@@ -1,3 +1,28 @@
+
+.trianglebottomleft {
+	width: 0;
+	height: 0;
+	border-bottom: 400px solid #f4d1ae;
+	border-right: 400px solid transparent;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+ 
+.triangletopright {
+	width: 0;
+	height: 0;
+	border-top: 400px solid #f4d1ae;
+	border-left: 400px solid transparent;
+    position: fixed;
+    right: 0;
+    top:0;
+    z-index: 0;
+}
+
+
 .bandeau
 {
     display: flex;
@@ -40,7 +65,9 @@
   .logoTop
   {
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 2%;
+    width: 100%;
+    height: auto;
   }
 
   .title
@@ -80,6 +107,19 @@
     font-size: large;
   }
 
+  .buttonCustom2
+  {
+    background-color: #12263a;
+    color: white;
+    border-radius: 30px;
+    padding: 15px;
+    height: 44px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    width: 65px;
+  }
+
   .buttonCustom
   {
     background-color: #12263a;
@@ -93,21 +133,29 @@
     width: 65px;
   }
 
+
+  .currentChoose
+  {
+    border: 2px solid black !important;
+  }
+
   .buttonInt
   {
     width: 50px;
     height: 50px;
     margin-left: 8%;
-    margin-top: 7%;
+    margin-top: 2%;
+    margin-bottom: 2%;
   }
 
   .imgGame
   {
-    width: 70%;
+    width: 250px;
     height: auto;
     margin-top: 4%;
     margin-left: 17%;
     position: relative;
+    border: 2px solid black;
   }
 
   .buttonChoose
@@ -119,7 +167,7 @@
   {
     width: 70%;
     background-color: #06BCC1;
-    padding: 3%;
+    padding: 2% 3% 2% 3%;
     color: white;
     font-size: larger;
     font-weight: bold;
@@ -168,4 +216,11 @@
 .exemple
 {
   margin-top: 5%;
+}
+
+
+.flashcardPage
+{
+  z-index: 100;
+  position: relative;
 }

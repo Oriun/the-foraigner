@@ -8,9 +8,18 @@ export type FlashCardProps = {
   game: FlashcardsData;
 };
 
+import Image from "next/image";
+
+
+import logo from "./../../assets/accueil/Group 95.png"; // Tell webpack this JS file uses this image
+
+
 const FlashCard: React.FC<FlashCardProps> = ({ game }) => {
   const [index, setIndex] = useState(0);
   const [choosen, setChoosen] = useState<number | null>(null);
+
+  const [classStyles, setclassStyles] = useState('')
+
   const router = useRouter();
   if (!game.content[index]) {
     router.back;
@@ -18,29 +27,44 @@ const FlashCard: React.FC<FlashCardProps> = ({ game }) => {
   }
   const current = game.content[index];
 
+  const longueur = game.content.length
+
   function validate() {
     if (choosen === current.answer) {
       alert("Bonne réponse");
-      setIndex(index + 1);
-      return;
+      if(index + 1 == longueur)
+      {
+        alert("Bravo vous avez fini ce petit jeux")
+        router.back()
+      }
+      else
+      {
+        setIndex(index + 1);
+        return;
+      }
     }
     alert("Mauvaise réponse");
   }
+
+  function ChooseResponse(opt : any , idx : any)
+  {
+    setChoosen(idx);
+    setclassStyles(opt)
+  }
   return (
     <div>
+
+      <div className={styles.triangletopright}></div>
+      <div className={styles.trianglebottomleft}></div>
+
       <div className={styles.flashcardPage}>
-        <div>
-          <div className={styles.triangleG}></div>
-        </div>
-        <div>
-          <div className={styles.triangleD}></div>
-        </div>
         <div className={styles.bandeau}>
           <div>
+            {/* <Image src={logo} alt="logo"  className={styles.logoTop}/> */}
             <Logo className={styles.logoTop} />
           </div>
           <div className={styles.hautDroite}>
-            <p className={styles.buttonCustom}>X</p>
+            <a className={styles.buttonCustom2} onClick={() => router.back()}>X</a>
           </div>
         </div>
 
@@ -55,6 +79,10 @@ const FlashCard: React.FC<FlashCardProps> = ({ game }) => {
           <div className={styles.buttonInt}>
             <p className={styles.buttonCustom}>?</p>
           </div>
+
+          <div>
+            {index + 1} / {longueur}
+          </div>
         </div>
 
         <div className={styles.game}>
@@ -64,7 +92,7 @@ const FlashCard: React.FC<FlashCardProps> = ({ game }) => {
           <div className={styles.divButton}>
             <div className={styles.buttonChoose}>
               {current.options.map((opt, idx) => (
-                <button key={opt} onClick={() => setChoosen(idx)}>
+                <button key={opt} onClick={() => ChooseResponse(opt , idx)} className={opt == classStyles ? styles.currentChoose : ""}>
                   {opt}
                 </button>
               ))}
