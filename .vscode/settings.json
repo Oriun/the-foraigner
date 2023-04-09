@@ -1,5 +1,7 @@
 {
-    "docwriter.progress.trackMethods": true,
-    "docwriter.language": "English",
-    "docwriter.style": "Auto-detect"
+  "docwriter.progress.trackMethods": true,
+  "docwriter.language": "English",
+  "docwriter.style": "Auto-detect",
+  "typescript.tsdk": "node_modules/.pnpm/typescript@5.0.2/node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

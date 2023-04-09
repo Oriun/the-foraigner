@@ -6,9 +6,6 @@ services:
       context: ./next
     ports:
       - '8089:80'
-      # Api on port 8090 
-    env_file:
-      - .env
   # bdd:
   #   image: mongo:5.0.4
   #   volumes:
