@@ -3,7 +3,7 @@ services:
   front:
     restart: unless-stopped
     build:
-      context: ./next
+      context: ./
     ports:
       - '8089:80'
   # bdd:
