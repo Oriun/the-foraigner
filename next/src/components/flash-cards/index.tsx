@@ -20,6 +20,9 @@ const FlashCard: React.FC<FlashCardProps> = ({ game }) => {
 
   const [classStyles, setclassStyles] = useState('')
 
+  const [result, setresult] = useState(0)
+
+
   const router = useRouter();
   if (!game.content[index]) {
     router.back;
@@ -27,15 +30,20 @@ const FlashCard: React.FC<FlashCardProps> = ({ game }) => {
   }
   const current = game.content[index];
 
-  const longueur = game.content.length
+  const longueur = game.content.length;
+
+
 
   function validate() {
     if (choosen === current.answer) {
       alert("Bonne réponse");
+      setresult(result => result + 1)
+      console.log(result)
       if(index + 1 == longueur)
       {
         alert("Bravo vous avez fini ce petit jeux")
         router.back()
+        return;
       }
       else
       {
