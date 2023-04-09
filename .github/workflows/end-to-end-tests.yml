@@ -1,6 +1,5 @@
 name: End To End Tests
 on:
-  push:
   workflow_dispatch:
   workflow_call:
 
