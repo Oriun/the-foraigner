@@ -1,4 +1,4 @@
-import { GetServerSideProps, GetStaticProps } from "next";
+import { GetServerSideProps } from "next";
 import React from "react";
 
 const Chat = () => {
@@ -7,7 +7,7 @@ const Chat = () => {
 
 export default Chat;
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: "http://chat.foraigner.com",
