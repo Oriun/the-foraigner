@@ -1,0 +1,19 @@
+name: Integration Tests
+on:
+  push:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Add .env
+        run: echo -e "${{ secrets.ENV }}\nCOMMIT_HASH='${{ github.sha }}'" > .env
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18.x"
+      - name: Run tests
+        run: npm run integration-test
