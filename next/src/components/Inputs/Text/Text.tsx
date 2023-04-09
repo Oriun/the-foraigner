@@ -9,6 +9,7 @@ export type TextInputProps = {
   placeholder?: string;
   className?: string;
   type?: "text" | "password";
+  id?: string;
 };
 
 const TextInput: React.FC<TextInputProps> = ({
@@ -18,6 +19,7 @@ const TextInput: React.FC<TextInputProps> = ({
   placeholder,
   className = "",
   type = "text",
+  id,
 }) => {
   const timeout = React.useRef<NodeJS.Timeout | null>(null);
   const [inputValue, setInputValue] = React.useState(value || "");
@@ -37,6 +39,7 @@ const TextInput: React.FC<TextInputProps> = ({
       <div className={styles.icone}>{icon}</div>
       <input
         className={clsx("section-head", styles.input)}
+        id={id}
         type={type}
         value={inputValue}
         placeholder={placeholder}

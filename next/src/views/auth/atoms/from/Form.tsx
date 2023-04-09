@@ -9,10 +9,11 @@ export type FormProps = {
   onSubmit: (email: string, password: string) => Promise<void>;
   title: string;
   head: string;
+  cta: string;
   tail: React.ReactNode;
 };
 
-const Form: React.FC<FormProps> = ({ onSubmit, title, head, tail }) => {
+const Form: React.FC<FormProps> = ({ onSubmit, title, head, tail, cta }) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [active, setActive] = React.useState(false);
@@ -51,19 +52,21 @@ const Form: React.FC<FormProps> = ({ onSubmit, title, head, tail }) => {
       <h1 className="grand-title">{title}</h1>
       <p className="section-head">{head}</p>
       <Text
+        id={"mail-" + title}
         placeholder="Email"
         value={email}
         onChange={setEmail}
         icon={<EmailIcon />}
       />
       <Text
+        id={"password-" + title}
         placeholder="Mot de passe"
         value={password}
         onChange={setPassword}
         type="password"
         icon={<LockIcon />}
       />
-      <Button text="S'inscrire" active={active} />
+      <Button text={cta} active={active} id={"submit-" + title} />
       {tail}
     </form>
   );

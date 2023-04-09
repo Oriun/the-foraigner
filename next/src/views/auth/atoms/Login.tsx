@@ -22,6 +22,7 @@ const Login: React.FC<{ switchMode: () => void }> = ({ switchMode }) => {
   return (
     <Form
       onSubmit={submit}
+      cta={"Se connecter"}
       title={"Connexion"}
       head={
         "Quels nouveaux mots allez-vous apprendre aujourd’hui ? Quels concepts maitriserez-vous demain ? Connectez-vous pour le savoir !"

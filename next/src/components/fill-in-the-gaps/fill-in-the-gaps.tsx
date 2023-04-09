@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styles from "./fill-in-the-gaps.module.scss";
 import StandardButton from "@/components/standard_button";
 import clsx from "clsx";
-import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import { FillInTheGapsData } from "@/services/Games";
 
 type PopUpProps = {
@@ -12,18 +11,13 @@ type PopUpProps = {
   reset: () => void;
 };
 const PopUp: React.FC<PopUpProps> = ({ isOpen, status, next, reset }) => {
+  if (!isOpen) return null;
   return (
     <div>
-      <Modal isOpen={isOpen} size="lg">
-        <ModalHeader>
-          <h1>Fin du jeu</h1>
-        </ModalHeader>
-        <ModalBody>
-          <div>
-            <button onClick={next}>Next</button>
-          </div>
-        </ModalBody>
-      </Modal>
+      <h1>Fin du jeu</h1>
+      <div>
+        <button onClick={next}>Next</button>
+      </div>
     </div>
   );
 };

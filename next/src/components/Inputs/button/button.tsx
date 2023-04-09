@@ -6,11 +6,13 @@ export type AllMightyButtonProps = {
   text: string;
   active?: boolean;
   onClick?: React.MouseEventHandler;
+  id?: string;
 };
 
 const Button: React.FC<AllMightyButtonProps> = ({
   text,
   active = true,
+  id,
   onClick,
 }) => {
   return (
@@ -18,6 +20,7 @@ const Button: React.FC<AllMightyButtonProps> = ({
       <div className={styles.block} />
       <ArrowIcon className={styles.icone} />
       <input
+        id={id}
         type="submit"
         value={text}
         className={clsx(styles.input, "small-title")}

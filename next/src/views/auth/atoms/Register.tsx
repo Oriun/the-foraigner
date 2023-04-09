@@ -22,6 +22,7 @@ const Register: React.FC<{ switchMode: () => void }> = ({ switchMode }) => {
   return (
     <Form
       onSubmit={submit}
+      cta="S'inscrire"
       title={"Inscription"}
       head={
         "Avec The Foraigner, vous trouverez des leçons pratiques et un partenaire de conversation dédié. Votre apprentissage commence dès aujourd’hui !"
