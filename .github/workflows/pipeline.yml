@@ -43,5 +43,5 @@ jobs:
             cd /home/${{ github.repository }} 
             git pull 
             echo -e "${{ secrets.ENV }}\nCOMMIT_HASH='${{ github.sha }}'" > .env 
-            docker-compose build
-            docker-compose up -d --force-recreate
+            docker compose build
+            docker compose up -d --force-recreate
