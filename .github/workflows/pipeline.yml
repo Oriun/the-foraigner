@@ -20,15 +20,17 @@ jobs:
   integration-tests:
     uses: ./.github/workflows/integration-tests.yml
     secrets: inherit
-    needs: build
+    needs: unit-test
   e2e-test:
     uses: ./.github/workflows/end-to-end-tests.yml
     secrets: inherit
-    needs: build
+    needs: unit-test
   deploy:
     if: github.repository == 'Oriun/the-foraigner'
-    needs: build
     runs-on: ubuntu-latest
+    needs:
+      - integration-tests
+      - e2e-test
     steps:
       - uses: actions/checkout@v2
       - name: Connect to VPS
