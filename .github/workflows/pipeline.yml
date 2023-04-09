@@ -1,9 +1,9 @@
 name: Pipeline
 on:
   push:
-    branches:
-      - master
   workflow_dispatch:
+  workflow_call:
+
 jobs:
   build:
     if: github.repository == 'Oriun/the-foraigner'
@@ -14,19 +14,18 @@ jobs:
         run: echo -e "${{ secrets.ENV }}\nCOMMIT_HASH='${{ github.sha }}'" > .env
       - name: Build FRONT Images
         run: docker-compose build front
-  test:
+  unit-test:
+    uses: ./.github/workflows/unit-tests.yml
+    secrets: inherit
     needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Add .env
-        run: echo -e "${{ secrets.ENV }}\nCOMMIT_HASH='${{ github.sha }}'" > .env
-      - name: Run Unit tests
-        run: docker-compose run --rm api npm run unit-test
-      - name: Run Unit tests
-        run: docker-compose run --rm api npm run integration-test
-      - name: Run End-To-End tests
-        run: docker-compose run --rm api npm run e2e-test
+  integration-tests:
+    uses: ./.github/workflows/integration-tests.yml
+    secrets: inherit
+    needs: build
+  e2e-test:
+    uses: ./.github/workflows/end-to-end-tests.yml
+    secrets: inherit
+    needs: build
   deploy:
     if: github.repository == 'Oriun/the-foraigner'
     needs: build
