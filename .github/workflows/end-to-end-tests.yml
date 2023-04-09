@@ -10,22 +10,23 @@ jobs:
       - uses: actions/checkout@v3
       - name: Add .env
         run: echo -e "${{ secrets.ENV }}\nCOMMIT_HASH='${{ github.sha }}'" > .env
-      - name: Cache Playwright binaries
+      - name: Cache playwright binaries
         uses: actions/cache@v3
-        id: cache-playwright
+        id: playwright-cache
         with:
           path: |
             ~/.cache/ms-playwright
-          key: playwright-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-playwright-${{ env.PLAYWRIGHT_VERSION }}
       - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
           node-version: "18.x"
       - name: Install dependencies
         run: npm install
-      - name: Install Playwright Browsers
-        if: steps.cache-playwright.outputs.cache-hit != 'true'
-        run: npx playwright install --with-deps
+      - run: npx playwright install --with-deps
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+      - run: npx playwright install-deps
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
       - name: Run tests
         run: npm run e2e-test
       - uses: actions/upload-artifact@v3
